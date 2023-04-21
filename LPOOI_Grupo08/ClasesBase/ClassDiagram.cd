@@ -24,8 +24,15 @@
   <Class Name="ClasesBase.Usuario">
     <Position X="10.75" Y="1.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ASAAAAEAAAAAAEAAAABAAgAAAACAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Roles">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAIACA=</HashCode>
+      <FileName>Roles.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
