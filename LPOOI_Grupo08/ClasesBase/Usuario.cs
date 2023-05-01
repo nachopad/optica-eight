@@ -36,5 +36,20 @@ namespace ClasesBase
             get { return usu_ApellidoNombre; }
             set { usu_ApellidoNombre = value; }
         }
+
+        private int rol_Id;
+
+        public int Rol_Id
+        {
+            get { return rol_Id; }
+            set { rol_Id = value; }
+        }
+
+        public Usuario(int rolId,string apellidoNombre,string nombreUsu,string contrasena) {
+            this.Rol_Id = rolId;
+            this.Usu_ApellidoNombre = apellidoNombre;
+            this.Usu_NombreUsuario = nombreUsu;
+            this.Usu_Contrasena = contrasena;
+        }
     }
 }
