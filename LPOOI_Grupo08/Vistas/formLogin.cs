@@ -66,5 +66,25 @@ namespace Vistas
                  MessageBox.Show("Usuario o Contraseña no son validos");   
             }
         }
+
+        private void IngContra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngUsu_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void IngUsu_Click(object sender, EventArgs e)
+        {
+            IngUsu.Text = "";
+        }
+
+        private void IngContra_Click(object sender, EventArgs e)
+        {
+            IngContra.Text = "";
+        }
     }
 }
