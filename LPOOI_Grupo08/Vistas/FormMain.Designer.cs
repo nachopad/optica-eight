@@ -33,7 +33,12 @@
             this.nomUsu = new System.Windows.Forms.Label();
             this.tipoUsu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.navCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.navProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.navObraSocial = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -42,12 +47,12 @@
             this.groupBox1.Controls.Add(this.nomUsu);
             this.groupBox1.Controls.Add(this.tipoUsu);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(242, 133);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vienvenido";
+            this.groupBox1.Text = "Bienvenido";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label4
@@ -87,18 +92,56 @@
             this.label1.Text = "Usuario: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.navCliente,
+            this.navProducto,
+            this.navObraSocial});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // navCliente
+            // 
+            this.navCliente.Name = "navCliente";
+            this.navCliente.Size = new System.Drawing.Size(61, 20);
+            this.navCliente.Text = "Clientes";
+            this.navCliente.Click += new System.EventHandler(this.navCliente_Click);
+            // 
+            // navProducto
+            // 
+            this.navProducto.Name = "navProducto";
+            this.navProducto.Size = new System.Drawing.Size(73, 20);
+            this.navProducto.Text = "Productos";
+            this.navProducto.Click += new System.EventHandler(this.navProducto_Click);
+            // 
+            // navObraSocial
+            // 
+            this.navObraSocial.Name = "navObraSocial";
+            this.navObraSocial.Size = new System.Drawing.Size(79, 20);
+            this.navObraSocial.Text = "Obra Social";
+            this.navObraSocial.Click += new System.EventHandler(this.navObraSocial_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +152,9 @@
         private System.Windows.Forms.Label nomUsu;
         private System.Windows.Forms.Label tipoUsu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem navCliente;
+        private System.Windows.Forms.ToolStripMenuItem navProducto;
+        private System.Windows.Forms.ToolStripMenuItem navObraSocial;
     }
 }

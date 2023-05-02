@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.IngUsu = new System.Windows.Forms.TextBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.IngContra = new System.Windows.Forms.TextBox();
-            this.btnIngresar_Click = new System.Windows.Forms.Button();
+            this.IngUsu = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnIngresar_Click);
+            this.groupBox1.Controls.Add(this.btnIngresar);
             this.groupBox1.Controls.Add(this.IngContra);
             this.groupBox1.Controls.Add(this.IngUsu);
             this.groupBox1.Controls.Add(this.label1);
@@ -70,12 +70,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
-            // IngUsu
+            // btnIngresar
             // 
-            this.IngUsu.Location = new System.Drawing.Point(112, 40);
-            this.IngUsu.Name = "IngUsu";
-            this.IngUsu.Size = new System.Drawing.Size(100, 20);
-            this.IngUsu.TabIndex = 2;
+            this.btnIngresar.Location = new System.Drawing.Point(112, 151);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(98, 28);
+            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // IngContra
             // 
@@ -84,15 +87,12 @@
             this.IngContra.Size = new System.Drawing.Size(100, 20);
             this.IngContra.TabIndex = 3;
             // 
-            // btnIngresar_Click
+            // IngUsu
             // 
-            this.btnIngresar_Click.Location = new System.Drawing.Point(112, 151);
-            this.btnIngresar_Click.Name = "btnIngresar_Click";
-            this.btnIngresar_Click.Size = new System.Drawing.Size(98, 28);
-            this.btnIngresar_Click.TabIndex = 4;
-            this.btnIngresar_Click.Text = "Ingresar";
-            this.btnIngresar_Click.UseVisualStyleBackColor = true;
-            this.btnIngresar_Click.Click += new System.EventHandler(this.btnIngresar_Click_Click);
+            this.IngUsu.Location = new System.Drawing.Point(112, 40);
+            this.IngUsu.Name = "IngUsu";
+            this.IngUsu.Size = new System.Drawing.Size(100, 20);
+            this.IngUsu.TabIndex = 2;
             // 
             // formLogin
             // 
@@ -113,7 +113,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnIngresar_Click;
+        private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox IngContra;
         private System.Windows.Forms.TextBox IngUsu;
     }

@@ -48,5 +48,25 @@ namespace Vistas
         {
 
         }
+
+        private void navCliente_Click(object sender, EventArgs e)
+        {
+            AltaCliente formCliente = new AltaCliente();
+            formCliente.Show();
+        }
+
+        private void navProducto_Click(object sender, EventArgs e)
+        {
+            AltaProducto formProducto = new AltaProducto();
+            formProducto.Show();
+        }
+
+        private void navObraSocial_Click(object sender, EventArgs e)
+        {
+            AltaObraSocial formObraSocial = new AltaObraSocial();
+            formObraSocial.Show();
+        }
+
+    
     }
 }

@@ -49,7 +49,22 @@ namespace ClasesBase
             get { return cli_NroCarnet; }
             set { cli_NroCarnet = value; }
         }
-        
+
+        public Cliente(string dni, string apellido, string nombre, string direccion, string cuit, string nroCarnet)
+        {
+            Cli_Dni = dni;
+            Cli_Apellido = apellido;
+            Cli_Nombre = nombre;
+            Cli_Direccion = direccion;
+            Cli_Cuit = cuit;
+            Cli_NroCarnet = nroCarnet;
+        }
+
+        public override string ToString()
+        {
+            return "DNI: " + Cli_Dni + ", Apellido: " + Cli_Apellido + ", Nombre: " + Cli_Nombre + ", Dirección: " + Cli_Direccion + ", CUIT: " + Cli_Cuit + ", Nro. Carnet: " + Cli_NroCarnet;
+        }
+
 
 
     }

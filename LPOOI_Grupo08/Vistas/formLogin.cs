@@ -21,8 +21,19 @@ namespace Vistas
         {
 
         }
+        private void btnIngresar_MouseHover(object sender, EventArgs e)
+        {
+            btnIngresar.BackColor = Color.Red;
+            btnIngresar.Font = new Font(btnIngresar.Font, FontStyle.Bold);
+        }
 
-        private void btnIngresar_Click_Click(object sender, EventArgs e)
+        private void btnIngresar_MouseLeave(object sender, EventArgs e)
+        {
+            btnIngresar.BackColor = SystemColors.Control;
+            btnIngresar.ForeColor = SystemColors.ControlText;
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
                Roles administrador= new Roles(1,"Administrador");
                Roles operador= new Roles(2,"Operador");
