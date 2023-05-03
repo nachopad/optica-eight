@@ -67,6 +67,27 @@ namespace Vistas
             formObraSocial.Show();
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        
+
+        private void navSalir_Click_1(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Está seguro de cerrar sesión", "Seleccione", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                FormMain.ActiveForm.Hide();
+                formLogin login = new formLogin();
+                login.Activate();
+                login.Show();
+                this.Close();
+
+            }
+        }
+
     
     }
 }

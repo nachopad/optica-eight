@@ -37,6 +37,7 @@
             this.navCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.navProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.navObraSocial = new System.Windows.Forms.ToolStripMenuItem();
+            this.navSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +98,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.navCliente,
             this.navProducto,
-            this.navObraSocial});
+            this.navObraSocial,
+            this.navSalir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(284, 24);
@@ -124,6 +126,13 @@
             this.navObraSocial.Size = new System.Drawing.Size(79, 20);
             this.navObraSocial.Text = "Obra Social";
             this.navObraSocial.Click += new System.EventHandler(this.navObraSocial_Click);
+            // 
+            // navSalir
+            // 
+            this.navSalir.Name = "navSalir";
+            this.navSalir.Size = new System.Drawing.Size(41, 20);
+            this.navSalir.Text = "Salir";
+            this.navSalir.Click += new System.EventHandler(this.navSalir_Click_1);
             // 
             // FormMain
             // 
@@ -156,5 +165,6 @@
         private System.Windows.Forms.ToolStripMenuItem navCliente;
         private System.Windows.Forms.ToolStripMenuItem navProducto;
         private System.Windows.Forms.ToolStripMenuItem navObraSocial;
+        private System.Windows.Forms.ToolStripMenuItem navSalir;
     }
 }

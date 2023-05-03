@@ -59,6 +59,7 @@ namespace Vistas
                 Roles tipoUsu = listRoles.Find(b => b.Rol_Codigo.Equals(buscarUsu.Rol_Id));
                // MessageBox.Show(tipoUsu.Rol_Descripcion);
                FormMain formMain = new FormMain(buscarUsu, tipoUsu.Rol_Descripcion);
+               formLogin.ActiveForm.Hide();
                 formMain.Show();
 
             }
