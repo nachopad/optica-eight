@@ -88,6 +88,11 @@ namespace Vistas
             }
         }
 
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
     
     }
 }

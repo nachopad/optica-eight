@@ -34,6 +34,19 @@ namespace Vistas
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegrsar_Click(object sender, EventArgs e)
+        {
+            AltaObraSocial.ActiveForm.Hide();
+            FormMain.ActiveForm.Activate();
+            FormMain.ActiveForm.Show();
+            this.Close();
+        }
+
        
     }
 }

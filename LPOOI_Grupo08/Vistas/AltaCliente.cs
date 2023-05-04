@@ -16,30 +16,128 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void AltaCliente_Load(object sender, EventArgs e)
+        private void load_clientes()
         {
-
+            dgwClientes.DataSource = ClienteABM.list_clientes();
         }
 
         private void BotonGuardar_Click(object sender, EventArgs e)
         {
-            string dni = txtDni.Text;
-            string apellido = txtApellido.Text;
-            string nombre = txtNombre.Text;
-            string direccion = txtDireccion.Text;
-            string cuit = txtCuit.Text;
-            string nroCarnet = txtNroCarnet.Text;
+            Cliente cliente = new Cliente();
+            cliente.Cli_Dni = txtDni.Text;
+            cliente.Cli_Apellido = txtApellido.Text;
+            cliente.Cli_Nombre = txtNombre.Text;
+            cliente.Cli_Direccion = txtDireccion.Text;
+            cliente.Cli_Cuit = txtCuit.Text;
+            cliente.Cli_NroCarnet = txtNroCarnet.Text;
 
-            if (string.IsNullOrEmpty(dni) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(cuit) || string.IsNullOrEmpty(nroCarnet))
-                MessageBox.Show("Todos los campos son obligatorios");
-            else if (MessageBox.Show("¿Está seguro que desea continuar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (String.IsNullOrEmpty(txtDni.Text) || String.IsNullOrEmpty(txtApellido.Text) || String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtDireccion.Text) || String.IsNullOrEmpty(txtCuit.Text) || String.IsNullOrEmpty(txtNroCarnet.Text))
             {
-                Cliente cliente = new Cliente(dni, apellido, nombre, direccion, cuit, nroCarnet);
-                MessageBox.Show("Cliente Guardado:" + cliente.ToString());
+                MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo cliente", "Error al registrar");
+            }
+            else
+            {
+                ClienteABM.insert_cliente(cliente);
+                load_clientes();
+                txtDni.Text = null;
+                txtApellido.Text = null;
+                txtNombre.Text = null;
+                txtDireccion.Text = null;
+                txtCuit.Text = null;
+                txtNroCarnet.Text = null;
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            cliente.Cli_Dni = txtDni.Text;
+            cliente.Cli_Apellido = txtApellido.Text;
+            cliente.Cli_Nombre = txtNombre.Text;
+            cliente.Cli_Direccion = txtDireccion.Text;
+            cliente.Cli_Cuit = txtCuit.Text;
+            cliente.Cli_NroCarnet = txtNroCarnet.Text;
 
+            if (String.IsNullOrEmpty(txtDni.Text) || String.IsNullOrEmpty(txtApellido.Text) || String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtDireccion.Text) || String.IsNullOrEmpty(txtCuit.Text) || String.IsNullOrEmpty(txtNroCarnet.Text))
+            {
+                MessageBox.Show("Debe completar todos los campos antes de modificar un cliente", "Error al modificar");
+            }
+            else
+            {
+                ClienteABM.modify_cliente(cliente);
+                MessageBox.Show("Datos modificados exitosamente");
+                load_clientes();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if ((String.IsNullOrEmpty(txtDniSearch.Text)) || (String.IsNullOrEmpty(txtCarnetSearch.Text)))
+            {
+                MessageBox.Show("Todos los campos de buqsueda son obligatorios", "Error al buscar");
+                load_clientes();
+            }
+            else
+            {
+                dgwClientes.DataSource = ClienteABM.search_clientes(txtDniSearch.Text, txtCarnetSearch.Text);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ClienteABM.delete_cliente(txtDni.Text);
+            MessageBox.Show("Datos del cliente eliminados exitosamente","Eliminacion exitosa");
+            load_clientes();
+            txtDni.Text = null;
+            txtApellido.Text = null;
+            txtNombre.Text = null;
+            txtDireccion.Text = null;
+            txtCuit.Text = null;
+            txtNroCarnet.Text = null;
+        }
+
+        private void dgwClientes_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dgwClientes.CurrentRow != null)
+            {
+                txtDni.Text = dgwClientes.CurrentRow.Cells["DNI"].Value.ToString();
+                txtApellido.Text = dgwClientes.CurrentRow.Cells["Apellido"].Value.ToString();
+                txtNombre.Text = dgwClientes.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtDireccion.Text = dgwClientes.CurrentRow.Cells["Direccion"].Value.ToString();
+                txtCuit.Text = dgwClientes.CurrentRow.Cells["Direccion"].Value.ToString();
+                txtNroCarnet.Text = dgwClientes.CurrentRow.Cells["N° Carnet"].Value.ToString();
+            }
+        }
+
+        private void AltaCliente_Load(object sender, EventArgs e)
+        {
+            load_clientes();
+        }
+
+        
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDniSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            AltaCliente.ActiveForm.Hide();
+            FormMain.ActiveForm.Activate();
+            FormMain.ActiveForm.Show();
+            this.Close();
+        }
        
     }
 }

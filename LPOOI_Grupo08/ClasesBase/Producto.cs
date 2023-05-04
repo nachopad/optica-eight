@@ -43,6 +43,7 @@ namespace ClasesBase
             prod_Descripcion = descripcion;
             prod_Precio = precio; 
         }
+
         public override string ToString()
         {
              return "Codigo: " + prod_Codigo + ", Categoria: " +  prod_Categoria + ", Descripcion: " + prod_Descripcion + ", Precio: " + prod_Precio; 

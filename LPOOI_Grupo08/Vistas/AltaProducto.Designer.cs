@@ -37,100 +37,135 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 75);
+            this.label1.Location = new System.Drawing.Point(26, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Categoria";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 118);
+            this.label2.Location = new System.Drawing.Point(26, 144);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Descripcion";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 164);
+            this.label3.Location = new System.Drawing.Point(26, 194);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Precio";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 33);
+            this.label4.Location = new System.Drawing.Point(26, 35);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Codigo";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(120, 26);
+            this.txtCodigo.Location = new System.Drawing.Point(135, 29);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.Size = new System.Drawing.Size(148, 26);
+            this.txtCodigo.TabIndex = 1;
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(120, 72);
+            this.txtCategoria.Location = new System.Drawing.Point(135, 84);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoria.TabIndex = 5;
+            this.txtCategoria.Size = new System.Drawing.Size(148, 26);
+            this.txtCategoria.TabIndex = 2;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(120, 118);
+            this.txtDescripcion.Location = new System.Drawing.Point(135, 138);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 6;
+            this.txtDescripcion.Size = new System.Drawing.Size(148, 26);
+            this.txtDescripcion.TabIndex = 3;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(120, 164);
+            this.txtPrecio.Location = new System.Drawing.Point(135, 194);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.Size = new System.Drawing.Size(148, 26);
+            this.txtPrecio.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(182, 226);
+            this.button1.Location = new System.Drawing.Point(229, 261);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Guardar";
+            this.button1.Size = new System.Drawing.Size(112, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtPrecio);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtCategoria);
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Location = new System.Drawing.Point(39, 49);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(348, 304);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de Producto";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Location = new System.Drawing.Point(3, 3);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(140, 40);
+            this.btnRegresar.TabIndex = 1;
+            this.btnRegresar.Text = "Volver al Menu";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // AltaProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.txtCategoria);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(426, 402);
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaProducto";
             this.Text = "AltaProducto";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,5 +180,7 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

@@ -46,3 +46,17 @@ C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.A
 C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.formLogin.resources
 C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormMain.resources
 C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.exe
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.pdb
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.pdb
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\ClasesBase.dll
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\ClasesBase.pdb
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.formLogin.resources
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormMain.resources
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache

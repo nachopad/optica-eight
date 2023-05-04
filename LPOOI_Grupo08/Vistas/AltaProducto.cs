@@ -33,6 +33,14 @@ namespace Vistas
                 }
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            AltaProducto.ActiveForm.Hide();
+            FormMain.ActiveForm.Activate();
+            FormMain.ActiveForm.Show();
+            this.Close();
+        }
+
        
     }
 }
