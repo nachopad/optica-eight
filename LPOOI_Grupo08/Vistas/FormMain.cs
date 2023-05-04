@@ -93,6 +93,18 @@ namespace Vistas
 
         }
 
+        private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVenta formVenta = new FormVenta();
+            formVenta.Show();
+        }
+
+        private void navVentaVer_Click(object sender, EventArgs e)
+        {
+            FormVerVentas ver = new FormVerVentas();
+            ver.Show();
+        }
+
     
     }
 }
