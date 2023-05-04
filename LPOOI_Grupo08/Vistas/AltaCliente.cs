@@ -64,9 +64,13 @@ namespace Vistas
             }
             else
             {
-                ClienteABM.modify_cliente(cliente);
-                MessageBox.Show("Datos modificados exitosamente");
-                load_clientes();
+                var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo);
+                if (respuesta == DialogResult.Yes)
+                {
+                    ClienteABM.modify_cliente(cliente);
+                    MessageBox.Show("Datos modificados exitosamente");
+                    load_clientes();
+                }
             }
         }
 
@@ -85,15 +89,19 @@ namespace Vistas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ClienteABM.delete_cliente(txtDni.Text);
-            MessageBox.Show("Datos del cliente eliminados exitosamente","Eliminacion exitosa");
-            load_clientes();
-            txtDni.Text = null;
-            txtApellido.Text = null;
-            txtNombre.Text = null;
-            txtDireccion.Text = null;
-            txtCuit.Text = null;
-            txtNroCarnet.Text = null;
+            var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el cliente?", "Advertencia", MessageBoxButtons.YesNo);
+            if (respuesta == DialogResult.Yes)
+            {
+                ClienteABM.delete_cliente(txtDni.Text);
+                MessageBox.Show("Datos del cliente eliminados exitosamente", "Eliminacion exitosa");
+                load_clientes();
+                txtDni.Text = null;
+                txtApellido.Text = null;
+                txtNombre.Text = null;
+                txtDireccion.Text = null;
+                txtCuit.Text = null;
+                txtNroCarnet.Text = null;
+            }
         }
 
         private void dgwClientes_CurrentCellChanged(object sender, EventArgs e)
@@ -104,7 +112,7 @@ namespace Vistas
                 txtApellido.Text = dgwClientes.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtNombre.Text = dgwClientes.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtDireccion.Text = dgwClientes.CurrentRow.Cells["Direccion"].Value.ToString();
-                txtCuit.Text = dgwClientes.CurrentRow.Cells["Direccion"].Value.ToString();
+                txtCuit.Text = dgwClientes.CurrentRow.Cells["CUIT"].Value.ToString();
                 txtNroCarnet.Text = dgwClientes.CurrentRow.Cells["N° Carnet"].Value.ToString();
             }
         }

@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Roles.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioABM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

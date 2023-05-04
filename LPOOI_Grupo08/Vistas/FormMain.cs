@@ -24,6 +24,74 @@ namespace Vistas
             tipoUsu.Text= tipo;
         }
 
+        private void navCliente_Click(object sender, EventArgs e)
+        {
+            AltaCliente formCliente = new AltaCliente();
+            formCliente.Show();
+        }
+
+        private void navProducto_Click(object sender, EventArgs e)
+        {
+            AltaProducto formProducto = new AltaProducto();
+            formProducto.Show();
+        }
+
+        private void navObraSocial_Click(object sender, EventArgs e)
+        {
+            AltaObraSocial formObraSocial = new AltaObraSocial();
+            formObraSocial.Show();
+        }
+
+        private void navSalir_Click_1(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("¿Está seguro de cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo);
+            if (resultado == DialogResult.Yes)
+            {
+                FormMain.ActiveForm.Hide();
+                formLogin login = new formLogin();
+                login.Activate();
+                login.Show();
+                this.Close();
+
+            }
+        }
+
+        private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVenta formVenta = new FormVenta();
+            formVenta.Show();
+        }
+
+        private void navVentaVer_Click(object sender, EventArgs e)
+        {
+            FormVerVentas ver = new FormVerVentas();
+            ver.Show();
+        }
+
+        private void navUsuario_Click(object sender, EventArgs e)
+        {
+            AltaUsuario altaUsuario = new AltaUsuario();
+            altaUsuario.Show();
+        }
+
+        public void verificar_login(string usuario, string rolCodigo)
+        {
+            if(rolCodigo == "1")
+            {
+                navCliente.Visible = false;
+                navVenta.Visible = false;
+                navObraSocial.Visible = false;
+            }
+            else if (rolCodigo == "2")
+            {
+                navUsuario.Visible = false;
+                navProducto.Visible = false;
+                navObraSocial.Visible = false;
+            }
+            nomUsu.Text = usuario;
+            tipoUsu.Text = UsuarioABM.get_rolDescripcion(rolCodigo);
+        }
+
         private void FormMain_Load(object sender, EventArgs e)
         {
 
@@ -49,62 +117,15 @@ namespace Vistas
 
         }
 
-        private void navCliente_Click(object sender, EventArgs e)
-        {
-            AltaCliente formCliente = new AltaCliente();
-            formCliente.Show();
-        }
-
-        private void navProducto_Click(object sender, EventArgs e)
-        {
-            AltaProducto formProducto = new AltaProducto();
-            formProducto.Show();
-        }
-
-        private void navObraSocial_Click(object sender, EventArgs e)
-        {
-            AltaObraSocial formObraSocial = new AltaObraSocial();
-            formObraSocial.Show();
-        }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
-        }
-
-        
-
-        private void navSalir_Click_1(object sender, EventArgs e)
-        {
-            var resultado = MessageBox.Show("Está seguro de cerrar sesión", "Seleccione", MessageBoxButtons.YesNo);
-            if (resultado == DialogResult.Yes)
-            {
-                FormMain.ActiveForm.Hide();
-                formLogin login = new formLogin();
-                login.Activate();
-                login.Show();
-                this.Close();
-
-            }
         }
 
         private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
-
-        private void realizarVentaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormVenta formVenta = new FormVenta();
-            formVenta.Show();
-        }
-
-        private void navVentaVer_Click(object sender, EventArgs e)
-        {
-            FormVerVentas ver = new FormVerVentas();
-            ver.Show();
-        }
-
     
     }
 }

@@ -22,6 +22,11 @@ namespace ClasesBase
             this.Usu_Contrasena = contrasena;
         }
 
+        public Usuario()
+        {
+            
+        }
+
         public int Usu_ID
         {
             get { return usu_ID; }
