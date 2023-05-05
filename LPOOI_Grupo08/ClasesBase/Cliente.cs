@@ -13,6 +13,8 @@ namespace ClasesBase
         private string cli_Direccion;
         private string cli_Cuit;
         private string cli_NroCarnet;
+        private int cli_Id;
+
 
         public Cliente(string dni, string apellido, string nombre, string direccion, string cuit, string nroCarnet)
         {
@@ -29,6 +31,11 @@ namespace ClasesBase
 
         }
 
+        public int Cli_Id
+        {
+            get { return cli_Id; }
+            set { cli_Id = value; }
+        }
 
         public string Cli_Dni
         {

@@ -19,15 +19,39 @@ namespace Vistas
 
         private void BotonGuardar_Click(object sender, EventArgs e)
         {
-            Usuario oUser = new Usuario();
-            oUser.Rol_Id = (int)cmbRol.SelectedValue;
-            oUser.Usu_ApellidoNombre = txtApellidoNombre.Text;
-            oUser.Usu_NombreUsuario = txtUsername.Text;
-            oUser.Usu_Contrasena = txtPassword.Text;
+            //Se decidió utilizar un try/catch en este metodo ya que al borrar el cmbRol, no puede
+            //realizar la conversión correctamente y tira un error en tiempo de ejecución. De esta manera se soluciona.
+            try 
+            {
+                Usuario oUser = new Usuario();
+                oUser.Rol_Id = (int)cmbRol.SelectedValue;
+                oUser.Usu_ApellidoNombre = txtApellidoNombre.Text;
+                oUser.Usu_NombreUsuario = txtUsername.Text;
+                oUser.Usu_Contrasena = txtPassword.Text;
 
-            UsuarioABM.insert_usuario(oUser);
-
-            load_usuarios();
+                if (String.IsNullOrEmpty(cmbRol.Text) || String.IsNullOrEmpty(txtApellidoNombre.Text) || String.IsNullOrEmpty(txtUsername.Text) || String.IsNullOrEmpty(txtPassword.Text))
+                {
+                    MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo usuario", "Error al registrar");
+                }
+                else
+                {
+                    var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        UsuarioABM.insert_usuario(oUser);
+                        load_usuarios();
+                        cmbRol.Text = null;
+                        txtApellidoNombre.Text = null;
+                        txtUsername.Text = null;
+                        txtPassword.Text = null;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo usuario", "Error al registrar");
+            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -50,6 +74,8 @@ namespace Vistas
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
+            usuario.Usu_ID = Int32.Parse(txtId.Text);
+            usuario.Rol_Id = (int)cmbRol.SelectedValue;
             usuario.Usu_NombreUsuario = txtUsername.Text;
             usuario.Usu_Contrasena = txtPassword.Text;
             usuario.Usu_ApellidoNombre = txtApellidoNombre.Text;
@@ -63,7 +89,7 @@ namespace Vistas
                 var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo);
                 if (respuesta == DialogResult.Yes)
                 {
-                    UsuarioABM.modify_cliente(usuario, txtId.Text, txtRolCodigo.Text);
+                    UsuarioABM.modify_cliente(usuario);
                     MessageBox.Show("Datos modificados exitosamente", "Aviso");
                     load_usuarios();
                 }
@@ -97,7 +123,6 @@ namespace Vistas
         private void AltaUsuario_Load(object sender, EventArgs e)
         {
             load_combo_roles();
-
             load_usuarios();
         }
 

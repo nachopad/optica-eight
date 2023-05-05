@@ -29,7 +29,7 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static void modify_cliente(Usuario usuario, string id, string rolCod)
+        public static void modify_cliente(Usuario usuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
@@ -38,8 +38,8 @@ namespace ClasesBase
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.Parameters.AddWithValue("@cod", rolCod);
+            cmd.Parameters.AddWithValue("@id", usuario.Usu_ID);
+            cmd.Parameters.AddWithValue("@cod", usuario.Rol_Id);
             cmd.Parameters.AddWithValue("@usu", usuario.Usu_NombreUsuario);
             cmd.Parameters.AddWithValue("@pas", usuario.Usu_Contrasena);
             cmd.Parameters.AddWithValue("@ape", usuario.Usu_ApellidoNombre);

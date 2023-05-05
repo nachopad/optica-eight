@@ -87,6 +87,8 @@
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnIngresar.MouseLeave += new System.EventHandler(this.btnIngresar_MouseLeave);
+            this.btnIngresar.MouseHover += new System.EventHandler(this.btnIngresar_MouseHover);
             // 
             // txtPassword
             // 
@@ -124,6 +126,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "formLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido al Sistema";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

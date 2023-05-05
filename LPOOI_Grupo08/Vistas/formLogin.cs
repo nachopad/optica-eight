@@ -17,24 +17,10 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnIngresar_MouseHover(object sender, EventArgs e)
-        {
-            btnIngresar.BackColor = Color.Red;
-            btnIngresar.Font = new Font(btnIngresar.Font, FontStyle.Bold);
-        }
-
-        private void btnIngresar_MouseLeave(object sender, EventArgs e)
-        {
-            btnIngresar.BackColor = SystemColors.Control;
-            btnIngresar.ForeColor = SystemColors.ControlText;
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
-        {
+        {   //El punto 1 se ha comentado, ya que con la implementación del punto 11
+            //se utiliza la Base de Datos para la verificacion del acceso al sistema.
+
             /*
             Roles administrador= new Roles(1,"Administrador");
             Roles operador= new Roles(2,"Operador");
@@ -85,14 +71,16 @@ namespace Vistas
             
         }
 
-        private void IngContra_TextChanged(object sender, EventArgs e)
+        private void btnIngresar_MouseHover(object sender, EventArgs e)
         {
-
+            btnIngresar.BackColor = Color.Red;
+            btnIngresar.Font = new Font(btnIngresar.Font, FontStyle.Bold);
         }
 
-        private void IngUsu_TextChanged(object sender, EventArgs e)
+        private void btnIngresar_MouseLeave(object sender, EventArgs e)
         {
-            
+            btnIngresar.BackColor = SystemColors.Control;
+            btnIngresar.ForeColor = SystemColors.ControlText;
         }
 
         private void IngUsu_Click(object sender, EventArgs e)
@@ -104,5 +92,21 @@ namespace Vistas
         {
             txtPassword.Text = "";
         }
+
+        private void IngContra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngUsu_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

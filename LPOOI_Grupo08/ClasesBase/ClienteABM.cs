@@ -36,10 +36,11 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Cliente set cli_dni=@dni, cli_apellido=@ape, cli_nombre=@nom, cli_direccion=@dire, os_cuit=@cuit, cli_nro_carnet=@carnet WHERE cli_dni=@dni ";
+            cmd.CommandText = "UPDATE Cliente set cli_dni=@dni, cli_apellido=@ape, cli_nombre=@nom, cli_direccion=@dire, os_cuit=@cuit, cli_nro_carnet=@carnet WHERE cli_id = @id ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
+            cmd.Parameters.AddWithValue("@id", cliente.Cli_Id);
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
             cmd.Parameters.AddWithValue("@ape", cliente.Cli_Apellido);
             cmd.Parameters.AddWithValue("@nom", cliente.Cli_Nombre);
@@ -76,6 +77,26 @@ namespace ClasesBase
             return dt;
         }
 
+        
+        public static DataTable list_ObrasSocialesCuit()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM ObraSocial";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en la DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+        
         public static DataTable search_clientes(string dni, string nroCarnet)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
@@ -128,8 +149,6 @@ namespace ClasesBase
             // Cierra la conexión
             cnn.Close();
         }
-
-
 
     }
 }

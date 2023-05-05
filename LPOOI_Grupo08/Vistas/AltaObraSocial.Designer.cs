@@ -163,6 +163,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaObraSocial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaObraSocial";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

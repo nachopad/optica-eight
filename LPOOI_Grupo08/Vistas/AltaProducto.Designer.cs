@@ -162,6 +162,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaProducto";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

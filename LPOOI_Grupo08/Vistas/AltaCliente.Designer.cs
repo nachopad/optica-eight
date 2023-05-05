@@ -36,12 +36,13 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtCuit = new System.Windows.Forms.TextBox();
             this.txtNroCarnet = new System.Windows.Forms.TextBox();
             this.BotonGuardar = new System.Windows.Forms.Button();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.cmbCuit = new System.Windows.Forms.ComboBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgwClientes = new System.Windows.Forms.DataGridView();
@@ -93,9 +94,9 @@
             this.label4.Location = new System.Drawing.Point(62, 195);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 20);
+            this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Cuit";
+            this.label4.Text = "CUIT";
             // 
             // label5
             // 
@@ -109,42 +110,34 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(156, 72);
+            this.txtApellido.Location = new System.Drawing.Point(158, 71);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(169, 26);
+            this.txtApellido.Size = new System.Drawing.Size(167, 26);
             this.txtApellido.TabIndex = 1;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(156, 112);
+            this.txtNombre.Location = new System.Drawing.Point(158, 110);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(169, 26);
+            this.txtNombre.Size = new System.Drawing.Size(167, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(156, 152);
+            this.txtDireccion.Location = new System.Drawing.Point(158, 149);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(169, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(167, 26);
             this.txtDireccion.TabIndex = 3;
-            // 
-            // txtCuit
-            // 
-            this.txtCuit.Location = new System.Drawing.Point(156, 192);
-            this.txtCuit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(169, 26);
-            this.txtCuit.TabIndex = 4;
             // 
             // txtNroCarnet
             // 
-            this.txtNroCarnet.Location = new System.Drawing.Point(156, 232);
+            this.txtNroCarnet.Location = new System.Drawing.Point(158, 229);
             this.txtNroCarnet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNroCarnet.Name = "txtNroCarnet";
-            this.txtNroCarnet.Size = new System.Drawing.Size(169, 26);
+            this.txtNroCarnet.Size = new System.Drawing.Size(167, 26);
             this.txtNroCarnet.TabIndex = 5;
             // 
             // BotonGuardar
@@ -160,10 +153,10 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(156, 32);
+            this.txtDni.Location = new System.Drawing.Point(158, 32);
             this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(169, 26);
+            this.txtDni.Size = new System.Drawing.Size(167, 26);
             this.txtDni.TabIndex = 0;
             // 
             // lblDni
@@ -178,6 +171,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Controls.Add(this.cmbCuit);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.txtDni);
@@ -188,7 +183,6 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtNroCarnet);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtCuit);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.txtApellido);
@@ -200,6 +194,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Cliente";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(342, 32);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(44, 26);
+            this.txtId.TabIndex = 5;
+            this.txtId.Visible = false;
+            // 
+            // cmbCuit
+            // 
+            this.cmbCuit.FormattingEnabled = true;
+            this.cmbCuit.Location = new System.Drawing.Point(158, 188);
+            this.cmbCuit.Name = "cmbCuit";
+            this.cmbCuit.Size = new System.Drawing.Size(167, 28);
+            this.cmbCuit.TabIndex = 5;
             // 
             // btnModificar
             // 
@@ -316,6 +326,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente ABM";
             this.Load += new System.EventHandler(this.AltaCliente_Load);
             this.groupBox1.ResumeLayout(false);
@@ -337,7 +348,6 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtCuit;
         private System.Windows.Forms.TextBox txtNroCarnet;
         private System.Windows.Forms.Button BotonGuardar;
         private System.Windows.Forms.TextBox txtDni;
@@ -353,5 +363,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.ComboBox cmbCuit;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

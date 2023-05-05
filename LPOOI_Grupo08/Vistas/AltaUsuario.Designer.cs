@@ -270,6 +270,7 @@
             this.Controls.Add(this.dgwUsuarios);
             this.Controls.Add(this.groupBox1);
             this.Name = "AltaUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaUsuario";
             this.Load += new System.EventHandler(this.AltaUsuario_Load);
             this.gbBusqueda.ResumeLayout(false);
