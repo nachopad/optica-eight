@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -41,24 +42,37 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnIngresar);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Location = new System.Drawing.Point(51, 43);
+            this.groupBox1.Location = new System.Drawing.Point(13, 14);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(324, 317);
+            this.groupBox1.Size = new System.Drawing.Size(400, 374);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(226, 332);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(140, 32);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Vistas.Properties.Resources.IconLock;
-            this.pictureBox2.Location = new System.Drawing.Point(59, 174);
+            this.pictureBox2.Location = new System.Drawing.Point(97, 203);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 52);
@@ -69,7 +83,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Vistas.Properties.Resources.UserIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(97, 119);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 52);
@@ -79,10 +93,10 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(177, 274);
+            this.btnIngresar.Location = new System.Drawing.Point(34, 332);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(147, 43);
+            this.btnIngresar.Size = new System.Drawing.Size(140, 32);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -93,7 +107,7 @@
             // txtPassword
             // 
             this.txtPassword.AccessibleDescription = "";
-            this.txtPassword.Location = new System.Drawing.Point(117, 187);
+            this.txtPassword.Location = new System.Drawing.Point(155, 216);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -107,7 +121,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(117, 102);
+            this.txtUsername.Location = new System.Drawing.Point(155, 131);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(148, 26);
@@ -144,5 +158,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

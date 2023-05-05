@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 using ClasesBase;
 namespace Vistas
 {
@@ -16,6 +17,17 @@ namespace Vistas
             InitializeComponent();
         }
 
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
+            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
+            Color.OrangeRed, Color.Yellow,
+
+           LinearGradientMode.ForwardDiagonal);
+            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+        }
+
         private void load_clientes()
         {
             dgwClientes.DataSource = ClienteABM.list_clientes();
@@ -23,7 +35,7 @@ namespace Vistas
 
         private void load_combo_obrasSocialesCuit()
         {
-            cmbCuit.DisplayMember = "os_cuit";
+            cmbCuit.DisplayMember = "os_razon_social";
             cmbCuit.ValueMember = "os_cuit";
             cmbCuit.DataSource = ClienteABM.list_ObrasSocialesCuit();
         }
@@ -35,16 +47,16 @@ namespace Vistas
             cliente.Cli_Apellido = txtApellido.Text;
             cliente.Cli_Nombre = txtNombre.Text;
             cliente.Cli_Direccion = txtDireccion.Text;
-            cliente.Cli_Cuit = cmbCuit.Text;
+            cliente.Cli_Cuit = (string)cmbCuit.SelectedValue;
             cliente.Cli_NroCarnet = txtNroCarnet.Text;
 
             if (String.IsNullOrEmpty(txtDni.Text) || String.IsNullOrEmpty(txtApellido.Text) || String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtDireccion.Text) || String.IsNullOrEmpty(cmbCuit.Text) || String.IsNullOrEmpty(txtNroCarnet.Text))
             {
-                MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo cliente", "Error al registrar");
+                MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo cliente", "Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo);
+                var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
                 {
                     ClienteABM.insert_cliente(cliente);
@@ -62,27 +74,34 @@ namespace Vistas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            cliente.Cli_Id = Int32.Parse(txtId.Text);
-            cliente.Cli_Dni = txtDni.Text;
-            cliente.Cli_Apellido = txtApellido.Text;
-            cliente.Cli_Nombre = txtNombre.Text;
-            cliente.Cli_Direccion = txtDireccion.Text;
-            cliente.Cli_Cuit = cmbCuit.Text;
-            cliente.Cli_NroCarnet = txtNroCarnet.Text;
-
-            if (String.IsNullOrEmpty(txtDni.Text) || String.IsNullOrEmpty(txtApellido.Text) || String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtDireccion.Text) || String.IsNullOrEmpty(cmbCuit.Text) || String.IsNullOrEmpty(txtNroCarnet.Text))
+            if (txtId.Text.Equals(""))
             {
-                MessageBox.Show("Debe completar todos los campos antes de modificar un cliente", "Error al modificar");
+                MessageBox.Show("Debe seleccionar un cliente antes de realizar una modificacion", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo);
-                if (respuesta == DialogResult.Yes)
+                Cliente cliente = new Cliente();
+                cliente.Cli_Id = Int32.Parse(txtId.Text);
+                cliente.Cli_Dni = txtDni.Text;
+                cliente.Cli_Apellido = txtApellido.Text;
+                cliente.Cli_Nombre = txtNombre.Text;
+                cliente.Cli_Direccion = txtDireccion.Text;
+                cliente.Cli_Cuit = (string)cmbCuit.SelectedValue;
+                cliente.Cli_NroCarnet = txtNroCarnet.Text;
+
+                if (String.IsNullOrEmpty(txtDni.Text) || String.IsNullOrEmpty(txtApellido.Text) || String.IsNullOrEmpty(txtNombre.Text) || String.IsNullOrEmpty(txtDireccion.Text) || String.IsNullOrEmpty(cmbCuit.Text) || String.IsNullOrEmpty(txtNroCarnet.Text))
                 {
-                    ClienteABM.modify_cliente(cliente);
-                    MessageBox.Show("Datos modificados exitosamente");
-                    load_clientes();
+                    MessageBox.Show("Debe completar todos los campos antes de modificar un cliente", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        ClienteABM.modify_cliente(cliente);
+                        MessageBox.Show("Datos modificados exitosamente");
+                        load_clientes();
+                    }
                 }
             }
         }
@@ -101,7 +120,7 @@ namespace Vistas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el cliente?", "Advertencia", MessageBoxButtons.YesNo);
+            var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el cliente?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
                 ClienteABM.delete_cliente(txtDni.Text);
@@ -121,12 +140,16 @@ namespace Vistas
         {
             if (dgwClientes.CurrentRow != null)
             {
+                if (dgwClientes.CurrentRow.Cells["CUIT"].Value.ToString() == null)
+                {
+                    cmbCuit.SelectedValue = dgwClientes.CurrentRow.Cells["CUIT"].Value.ToString();
+                }
                 txtId.Text = dgwClientes.CurrentRow.Cells["cli_id"].Value.ToString();
                 txtDni.Text = dgwClientes.CurrentRow.Cells["DNI"].Value.ToString();
                 txtApellido.Text = dgwClientes.CurrentRow.Cells["Apellido"].Value.ToString();
                 txtNombre.Text = dgwClientes.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtDireccion.Text = dgwClientes.CurrentRow.Cells["Direccion"].Value.ToString();
-                cmbCuit.Text = dgwClientes.CurrentRow.Cells["CUIT"].Value.ToString();
+                cmbCuit.SelectedValue = dgwClientes.CurrentRow.Cells["CUIT"].Value.ToString();
                 txtNroCarnet.Text = dgwClientes.CurrentRow.Cells["N° Carnet"].Value.ToString();
             }
         }

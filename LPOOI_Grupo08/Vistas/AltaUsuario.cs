@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 using ClasesBase;
 
 namespace Vistas
@@ -15,6 +16,17 @@ namespace Vistas
         public AltaUsuario()
         {
             InitializeComponent();
+        }
+
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
+            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
+            Color.OrangeRed, Color.Yellow,
+
+           LinearGradientMode.ForwardDiagonal);
+            e.Graphics.FillRegion(Gradiente, new Region(Forma));
         }
 
         private void BotonGuardar_Click(object sender, EventArgs e)
@@ -31,11 +43,11 @@ namespace Vistas
 
                 if (String.IsNullOrEmpty(cmbRol.Text) || String.IsNullOrEmpty(txtApellidoNombre.Text) || String.IsNullOrEmpty(txtUsername.Text) || String.IsNullOrEmpty(txtPassword.Text))
                 {
-                    MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo usuario", "Error al registrar");
+                    MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo usuario", "Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo);
+                    var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
                         UsuarioABM.insert_usuario(oUser);
@@ -49,14 +61,14 @@ namespace Vistas
             }
             catch
             {
-                MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo usuario", "Error al registrar");
+                MessageBox.Show("Debe completar todos los campos antes de registrar un nuevo usuario", "Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo);
+            var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
                 UsuarioABM.delete_usuario(txtId.Text);
@@ -73,25 +85,32 @@ namespace Vistas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
-            usuario.Usu_ID = Int32.Parse(txtId.Text);
-            usuario.Rol_Id = (int)cmbRol.SelectedValue;
-            usuario.Usu_NombreUsuario = txtUsername.Text;
-            usuario.Usu_Contrasena = txtPassword.Text;
-            usuario.Usu_ApellidoNombre = txtApellidoNombre.Text;
-
-            if (String.IsNullOrEmpty(cmbRol.Text) || String.IsNullOrEmpty(txtUsername.Text) || String.IsNullOrEmpty(txtPassword.Text) || String.IsNullOrEmpty(txtApellidoNombre.Text))
+            if (txtId.Text.Equals(""))
             {
-                MessageBox.Show("Debe completar todos los campos antes de modificar un usuario", "Error al modificar");
+                MessageBox.Show("Debe seleccionar un usuario antes de realizar una modificacion", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo);
-                if (respuesta == DialogResult.Yes)
+                Usuario usuario = new Usuario();
+                usuario.Usu_ID = Int32.Parse(txtId.Text);
+                usuario.Rol_Id = (int)cmbRol.SelectedValue;
+                usuario.Usu_NombreUsuario = txtUsername.Text;
+                usuario.Usu_Contrasena = txtPassword.Text;
+                usuario.Usu_ApellidoNombre = txtApellidoNombre.Text;
+
+                if (String.IsNullOrEmpty(cmbRol.Text) || String.IsNullOrEmpty(txtUsername.Text) || String.IsNullOrEmpty(txtPassword.Text) || String.IsNullOrEmpty(txtApellidoNombre.Text))
                 {
-                    UsuarioABM.modify_cliente(usuario);
-                    MessageBox.Show("Datos modificados exitosamente", "Aviso");
-                    load_usuarios();
+                    MessageBox.Show("Debe completar todos los campos antes de modificar un usuario", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        UsuarioABM.modify_cliente(usuario);
+                        MessageBox.Show("Datos modificados exitosamente", "Aviso");
+                        load_usuarios();
+                    }
                 }
             }
         }
@@ -130,9 +149,15 @@ namespace Vistas
         {
             if (dgwUsuarios.CurrentRow != null)
             {
+                if (dgwUsuarios.CurrentRow.Cells["rol_codigo"].Value.ToString().Equals(""))
+                {
+                    cmbRol.SelectedValue = 1;
+                }
+                else
+                {
+                    cmbRol.SelectedValue = dgwUsuarios.CurrentRow.Cells["rol_codigo"].Value.ToString();
+                }
                 txtId.Text = dgwUsuarios.CurrentRow.Cells["usu_id"].Value.ToString();
-                txtRolCodigo.Text = dgwUsuarios.CurrentRow.Cells["rol_codigo"].Value.ToString();
-                cmbRol.SelectedValue = dgwUsuarios.CurrentRow.Cells["rol_codigo"].Value.ToString();
                 txtUsername.Text = dgwUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
                 txtPassword.Text = dgwUsuarios.CurrentRow.Cells["Contraseña"].Value.ToString();
                 txtApellidoNombre.Text = dgwUsuarios.CurrentRow.Cells["Apellido y Nombre"].Value.ToString();

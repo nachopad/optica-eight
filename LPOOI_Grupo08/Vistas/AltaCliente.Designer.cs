@@ -171,6 +171,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.cmbCuit);
             this.groupBox1.Controls.Add(this.btnModificar);
@@ -265,6 +266,7 @@
             // 
             // gbBusqueda
             // 
+            this.gbBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.gbBusqueda.Controls.Add(this.btnSearch);
             this.gbBusqueda.Controls.Add(this.txtCarnetSearch);
             this.gbBusqueda.Controls.Add(this.txtDniSearch);
@@ -327,7 +329,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cliente ABM";
+            this.Text = "Gestion de Cliente";
             this.Load += new System.EventHandler(this.AltaCliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

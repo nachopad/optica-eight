@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 using ClasesBase;
 namespace Vistas
 {
@@ -14,6 +15,17 @@ namespace Vistas
         public AltaObraSocial()
         {
             InitializeComponent();
+        }
+
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
+            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
+            Color.OrangeRed, Color.Yellow,
+
+           LinearGradientMode.ForwardDiagonal);
+            e.Graphics.FillRegion(Gradiente, new Region(Forma));
         }
 
         private void BotonGuardar_Click(object sender, EventArgs e)

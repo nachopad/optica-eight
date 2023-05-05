@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 using ClasesBase;
 
 namespace Vistas
@@ -15,6 +16,17 @@ namespace Vistas
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
+            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
+            Color.Cyan, Color.Blue,
+
+           LinearGradientMode.Vertical);
+            e.Graphics.FillRegion(Gradiente, new Region(Forma));
         }
 
         public FormMain(Usuario usu,string tipo) {

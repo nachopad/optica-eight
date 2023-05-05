@@ -151,8 +151,8 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand("SELECT usu_nombre_usuario, rol_codigo FROM Usuario WHERE usu_nombre_usuario LIKE @usuario AND usu_contrasenia LIKE @pas ");
-            cmd.Parameters.AddWithValue("usuario", "%" + username + "%");
-            cmd.Parameters.AddWithValue("pas", "%" + contrasena + "%");
+            cmd.Parameters.AddWithValue("usuario", username);
+            cmd.Parameters.AddWithValue("pas", contrasena);
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;

@@ -59,9 +59,9 @@
             this.lblCuit.Location = new System.Drawing.Point(37, 37);
             this.lblCuit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCuit.Name = "lblCuit";
-            this.lblCuit.Size = new System.Drawing.Size(66, 20);
+            this.lblCuit.Size = new System.Drawing.Size(46, 20);
             this.lblCuit.TabIndex = 1;
-            this.lblCuit.Text = "N° CUIT";
+            this.lblCuit.Text = "CUIT";
             this.lblCuit.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -128,6 +128,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblCuit);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.BotonGuardar);
@@ -164,7 +165,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaObraSocial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaObraSocial";
+            this.Text = "Registro de Obra Social";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

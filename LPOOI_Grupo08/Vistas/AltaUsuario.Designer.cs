@@ -66,6 +66,7 @@
             // 
             // gbBusqueda
             // 
+            this.gbBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.gbBusqueda.Controls.Add(this.btnSearch);
             this.gbBusqueda.Controls.Add(this.txtUsuarioSearch);
             this.gbBusqueda.Controls.Add(this.lblUsernameSearch);
@@ -116,6 +117,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtRolCodigo);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.cmbRol);
@@ -271,7 +273,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AltaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AltaUsuario";
+            this.Text = "Gestion de Usuario";
             this.Load += new System.EventHandler(this.AltaUsuario_Load);
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();

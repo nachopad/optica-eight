@@ -108,7 +108,6 @@ namespace ClasesBase
             cmd.CommandText += " cli_apellido as 'Apellido', cli_nombre as 'Nombre', ";
             cmd.CommandText += " cli_direccion as 'Direccion', os_cuit as 'CUIT', cli_nro_carnet as 'N° Carnet' ";
             cmd.CommandText += " FROM Cliente as C";
-            //cmd.CommandText += " LEFT JOIN Cliente as R ON (R.cli_dno=C.cli_dni)"; DUDA
 
             cmd.CommandText += " WHERE";
             cmd.CommandText += " cli_dni LIKE @dni AND cli_nro_carnet LIKE @nroCarnet ";
