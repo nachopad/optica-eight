@@ -181,5 +181,23 @@ namespace ClasesBase
             return dt.Rows[0]["rol_descripcion"].ToString();
         }
 
+        public static Boolean search_username(string username)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT COUNT(*) FROM Usuario WHERE usu_nombre_usuario = @us";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@us", username);
+
+            cnn.Open();
+            int count = (int)cmd.ExecuteScalar();
+            cnn.Close();
+            return count == 0;
+        }
+
     }
 }

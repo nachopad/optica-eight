@@ -50,12 +50,20 @@ namespace Vistas
                     var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
-                        UsuarioABM.insert_usuario(oUser);
-                        load_usuarios();
-                        cmbRol.Text = null;
-                        txtApellidoNombre.Text = null;
-                        txtUsername.Text = null;
-                        txtPassword.Text = null;
+                        if(UsuarioABM.search_username(oUser.Usu_NombreUsuario)==true)
+                        {
+                            UsuarioABM.insert_usuario(oUser);
+                            load_usuarios();
+                            cmbRol.Text = null;
+                            txtApellidoNombre.Text = null;
+                            txtUsername.Text = null;
+                            txtPassword.Text = null;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ya existe un usuario con el username aplicado", "Errror al registrar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                        
                     }
                 }
             }

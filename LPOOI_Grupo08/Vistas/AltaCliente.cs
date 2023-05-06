@@ -59,15 +59,23 @@ namespace Vistas
                 var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
                 {
-                    ClienteABM.insert_cliente(cliente);
-                    load_clientes();
-                    txtId.Text = null;
-                    txtDni.Text = null;
-                    txtApellido.Text = null;
-                    txtNombre.Text = null;
-                    txtDireccion.Text = null;
-                    cmbCuit.Text = null;
-                    txtNroCarnet.Text = null;
+                    if (ClienteABM.search_dni(cliente.Cli_Dni) == true)
+                    {
+                        ClienteABM.insert_cliente(cliente);
+                        load_clientes();
+                        txtId.Text = null;
+                        txtDni.Text = null;
+                        txtApellido.Text = null;
+                        txtNombre.Text = null;
+                        txtDireccion.Text = null;
+                        cmbCuit.Text = null;
+                        txtNroCarnet.Text = null;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe un cliente registrado con el DNI aplicado","Errror al registrar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    
                 }
             }
         }

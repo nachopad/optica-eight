@@ -73,7 +73,6 @@ namespace ClasesBase
             //Llena los datos de la consulta en la DataTable
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             return dt;
         }
 
@@ -147,6 +146,25 @@ namespace ClasesBase
 
             // Cierra la conexión
             cnn.Close();
+        }
+
+        public static Boolean search_dni(string dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "SELECT COUNT(*) FROM Cliente WHERE cli_dni = @dni";
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            cnn.Open();
+            int count = (int)cmd.ExecuteScalar();
+            cnn.Close();
+            return count == 0;
+            
         }
 
     }
