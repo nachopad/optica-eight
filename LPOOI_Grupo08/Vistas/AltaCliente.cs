@@ -87,7 +87,7 @@ namespace Vistas
                 MessageBox.Show("Debe seleccionar un cliente antes de realizar una modificacion", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-            {
+            {      
                 Cliente cliente = new Cliente();
                 cliente.Cli_Id = Int32.Parse(txtId.Text);
                 cliente.Cli_Dni = txtDni.Text;
@@ -106,9 +106,16 @@ namespace Vistas
                     var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
-                        ClienteABM.modify_cliente(cliente);
-                        MessageBox.Show("Datos modificados exitosamente");
-                        load_clientes();
+                        if (ClienteABM.search_dni(cliente.Cli_Dni) == true)
+                        {
+                            ClienteABM.modify_cliente(cliente);
+                            MessageBox.Show("Datos modificados exitosamente");
+                            load_clientes();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No puede modificar y aplicar el nuevo DNI, ya se encuentra registrado", "Errror al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                 }
             }

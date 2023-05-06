@@ -115,9 +115,17 @@ namespace Vistas
                     var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
-                        UsuarioABM.modify_cliente(usuario);
-                        MessageBox.Show("Datos modificados exitosamente", "Aviso");
-                        load_usuarios();
+                        if (UsuarioABM.search_username(usuario.Usu_NombreUsuario) == true)
+                        {
+                            UsuarioABM.modify_cliente(usuario);
+                            MessageBox.Show("Datos modificados exitosamente", "Aviso");
+                            load_usuarios();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No puede modificar y aplicar el nuevo username, ya se encuentra registrado", "Errror al registrar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                       
                     }
                 }
             }
