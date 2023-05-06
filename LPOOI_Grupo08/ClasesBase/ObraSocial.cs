@@ -37,5 +37,19 @@ namespace ClasesBase
             get { return os_Cuit; }
             set { os_Cuit = value; }
         }
+
+        public ObraSocial(string cuit, string razonSocial, string direccion, string telefono)
+        {
+            os_Cuit = cuit;
+            os_Direccion = direccion;
+            os_RazonSocial = razonSocial;
+            os_Telefono = telefono;
+        }
+
+        public override string ToString()
+        {
+            return "Cuit: " + os_Cuit + ", Razon Social: " + os_RazonSocial + ", Direccion: " + os_Direccion + ", Telefono: " + os_Telefono;
+        }
+
     }
 }
