@@ -117,5 +117,29 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public static DataTable filterSales(string fechaInicio, string fechaFinal)
+        {
+
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            //   cmd.CommandText = "SELECT ven_fecha as 'Fecha Venta', V.cli_dni as 'DNI Cliente',cli_apellido as 'Apellido', cli_nombre as 'Nombre' FROM Venta AS V LEFT OUTER JOIN Cliente AS C ON (C.cli_dni = V.cli_dni) WHERE ven_fecha BETWEEN '" + fechaInicio + " 03:00:00' AND '" + fechaFinal + " 23:30:00'";
+            cmd.CommandText = "SELECT "; // ven_nro as 'Venta Numero', ven_fecha as 'Fecha Venta', cli_dni as 'DNI Cliente' FROM Venta WHERE ven_fecha BETWEEN '" + fechaInicio + " 03:00:00' AND '" + fechaFinal + " 23:30:00'";
+            cmd.CommandText += " ven_nro as 'Venta Numero', ";
+            cmd.CommandText += " ven_fecha as 'Fecha Venta', cli_dni as 'DNI Cliente' ";
+            cmd.CommandText += " FROM Venta ";
+            cmd.CommandText += " WHERE ven_fecha ";
+            cmd.CommandText += " BETWEEN '" + fechaInicio + " 03:00:00' AND '" + fechaFinal + " 23:30:00'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        } 
     }
 }

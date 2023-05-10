@@ -70,6 +70,12 @@
     <Compile Include="AltaUsuario.Designer.cs">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFiltrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltrarVenta.Designer.cs">
+      <DependentUpon>FormFiltrarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltrarVenta.resx">
+      <DependentUpon>FormFiltrarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>

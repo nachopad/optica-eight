@@ -96,3 +96,10 @@ E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vi
 E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVerVentas.resources
 E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaUsuario.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltrarVenta.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVenta.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVerVentas.resources

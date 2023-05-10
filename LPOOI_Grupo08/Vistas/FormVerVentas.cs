@@ -82,5 +82,11 @@ namespace Vistas
             load_venta();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormFiltrarVenta filtrar = new FormFiltrarVenta();
+            filtrar.Show();
+        }
+
     }
 }

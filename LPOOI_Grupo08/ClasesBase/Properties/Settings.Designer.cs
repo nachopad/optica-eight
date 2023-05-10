@@ -26,9 +26,9 @@ namespace ClasesBase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=E:\\usuarios\\alumno\\Documentos\\LPOO.Grup" +
-            "o08\\LPOOI_Grupo08\\optica.mdf;Integrated Security=True;Connect Timeout=30;User In" +
-            "stance=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\PC\\Documents\\LPOO.Grupo08\\LPOO" +
+            "I_Grupo08\\optica.mdf;Integrated Security=True;Connect Timeout=30;User Instance=T" +
+            "rue")]
         public string opticaConnectionString {
             get {
                 return ((string)(this["opticaConnectionString"]));
