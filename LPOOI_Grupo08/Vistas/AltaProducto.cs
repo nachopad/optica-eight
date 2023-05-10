@@ -54,6 +54,16 @@ namespace Vistas
             this.Close();
         }
 
+        private void radioDescripcion_CheckedChanged(object sender, EventArgs e)
+        {
+            dgwProductos.DataSource = ProductoABM.list_producto_order_by_Descripcion();
+        }
+
+        private void radioCategoria_CheckedChanged(object sender, EventArgs e)
+        {
+            dgwProductos.DataSource = ProductoABM.list_producto_order_by_Categoria();
+        }
+
        
     }
 }

@@ -49,5 +49,48 @@ namespace ClasesBase
 
             return Convert.ToDecimal(dt.Rows[0]["prod_precio"].ToString());
         }
+        //Este metodo permitira obtener lalista ordenada por Categoria
+        public static DataTable list_producto_order_by_Categoria()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "listar_producto_categoria_sp";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        //Este metodo permitira obtener lalista ordenada por Descripcion
+        public static DataTable list_producto_order_by_Descripcion()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "listar_producto_descripcion_sp";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }
