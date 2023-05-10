@@ -30,14 +30,14 @@ namespace Vistas
 
         private void load_clientes()
         {
-            dgwClientes.DataSource = ClienteABM.list_clientes();
+            dgwClientes.DataSource = ClienteABM.list_clientes_sp();
         }
 
         private void load_combo_obrasSocialesCuit()
         {
             cmbCuit.DisplayMember = "os_razon_social";
             cmbCuit.ValueMember = "os_cuit";
-            cmbCuit.DataSource = ClienteABM.list_ObrasSocialesCuit();
+            cmbCuit.DataSource = ClienteABM.list_ObrasSocialesCuit_sp();
         }
 
         private void BotonGuardar_Click(object sender, EventArgs e)
@@ -59,9 +59,9 @@ namespace Vistas
                 var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
                 {
-                    if (ClienteABM.search_dni(cliente.Cli_Dni) == true)
+                    if (ClienteABM.search_dni_sp(cliente.Cli_Dni) == true)
                     {
-                        ClienteABM.insert_cliente(cliente);
+                        ClienteABM.insert_cliente_sp(cliente);
                         load_clientes();
                         txtId.Text = null;
                         txtDni.Text = null;
@@ -106,15 +106,15 @@ namespace Vistas
                     var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
-                        if (ClienteABM.search_dni(cliente.Cli_Dni) == true)
+                        try
                         {
-                            ClienteABM.modify_cliente(cliente);
+                            ClienteABM.modify_cliente_sp(cliente);
                             MessageBox.Show("Datos modificados exitosamente");
                             load_clientes();
                         }
-                        else
+                        catch
                         {
-                            MessageBox.Show("No puede modificar y aplicar el nuevo DNI, ya se encuentra registrado", "Errror al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Ya existe un cliente registrado con el DNI a modificar", "Errror al modificar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                 }
@@ -129,7 +129,7 @@ namespace Vistas
             }
             else
             {
-                dgwClientes.DataSource = ClienteABM.search_clientes(txtDniSearch.Text, txtCarnetSearch.Text);
+                dgwClientes.DataSource = ClienteABM.search_clientes_sp(txtDniSearch.Text, txtCarnetSearch.Text);
             }
         }
 
@@ -138,7 +138,7 @@ namespace Vistas
             var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el cliente?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                ClienteABM.delete_cliente(txtDni.Text);
+                ClienteABM.delete_cliente_sp(txtDni.Text);
                 MessageBox.Show("Datos del cliente eliminados exitosamente", "Eliminacion exitosa");
                 load_clientes();
                 txtId.Text = null;

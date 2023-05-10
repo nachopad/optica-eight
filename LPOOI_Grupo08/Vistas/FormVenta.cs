@@ -39,7 +39,7 @@ namespace Vistas
         {
             cmbCliente.DisplayMember = "DNI";
             cmbCliente.ValueMember = "DNI";
-            cmbCliente.DataSource = ClienteABM.list_clientes();
+            cmbCliente.DataSource = ClienteABM.list_clientes_sp();
         }
 
         private void load_comboProductos()

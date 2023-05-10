@@ -34,9 +34,18 @@ namespace Vistas
             dgwVenta.DataSource = ABMVentas.list_venta();
         }
 
+        //agregue yo
+        private void load_combo_clientes()
+        {
+            cmbFiltroCliente.DisplayMember = "cli_dni";
+            cmbFiltroCliente.ValueMember = "cli_dni";
+            cmbFiltroCliente.DataSource = ABMVentas.get_clientes_sp();
+        }
+
         private void FormVerVentas_Load(object sender, EventArgs e)
         {
             load_venta();
+            load_combo_clientes();
         }
 
         private void dgwVenta_CurrentCellChanged(object sender, EventArgs e)
@@ -49,9 +58,28 @@ namespace Vistas
             }
         }
 
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cmbFiltroCliente.Text = null;
+            load_venta();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbFiltroCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgwVenta.DataSource = ABMVentas.list_ventasByCliente(cmbFiltroCliente.Text);
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            cmbFiltroCliente.Text = null;
+            load_venta();
         }
 
     }
