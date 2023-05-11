@@ -17,6 +17,7 @@ namespace Vistas
             InitializeComponent();
         }
 
+     
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -198,6 +199,16 @@ namespace Vistas
             FormMain.ActiveForm.Activate();
             FormMain.ActiveForm.Show();
             this.Close();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nuevo_Click(object sender, EventArgs e)
+        {
+            dgwClientes.DataSource = ClienteABM.ordenar_clientes_apellidos_sp();
         }
        
     }

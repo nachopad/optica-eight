@@ -157,5 +157,27 @@ namespace ClasesBase
             return ((int)cmd.Parameters["@count_client"].Value) == 0;
         }
 
+
+        public static DataTable ordenar_clientes_apellidos_sp()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "ordenar_clientes_apellidos_sp";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
     }
 }

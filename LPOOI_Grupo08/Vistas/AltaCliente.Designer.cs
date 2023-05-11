@@ -53,99 +53,92 @@
             this.txtCarnetSearch = new System.Windows.Forms.TextBox();
             this.txtDniSearch = new System.Windows.Forms.TextBox();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.gbOrdenar = new System.Windows.Forms.GroupBox();
+            this.nuevo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwClientes)).BeginInit();
             this.gbBusqueda.SuspendLayout();
+            this.gbOrdenar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 77);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(35, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Apellido";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 117);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(35, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 152);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(35, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "Direccion";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 195);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(41, 127);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "CUIT";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 235);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(35, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 20);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "N° Carnet";
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(158, 71);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellido.Location = new System.Drawing.Point(105, 46);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(167, 26);
+            this.txtApellido.Size = new System.Drawing.Size(113, 20);
             this.txtApellido.TabIndex = 1;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(158, 110);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(105, 71);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(167, 26);
+            this.txtNombre.Size = new System.Drawing.Size(113, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(158, 149);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDireccion.Location = new System.Drawing.Point(105, 97);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(167, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(113, 20);
             this.txtDireccion.TabIndex = 3;
             // 
             // txtNroCarnet
             // 
-            this.txtNroCarnet.Location = new System.Drawing.Point(158, 229);
-            this.txtNroCarnet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNroCarnet.Location = new System.Drawing.Point(105, 149);
             this.txtNroCarnet.Name = "txtNroCarnet";
-            this.txtNroCarnet.Size = new System.Drawing.Size(167, 26);
+            this.txtNroCarnet.Size = new System.Drawing.Size(113, 20);
             this.txtNroCarnet.TabIndex = 5;
             // 
             // BotonGuardar
             // 
-            this.BotonGuardar.Location = new System.Drawing.Point(47, 286);
-            this.BotonGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonGuardar.Location = new System.Drawing.Point(31, 186);
             this.BotonGuardar.Name = "BotonGuardar";
-            this.BotonGuardar.Size = new System.Drawing.Size(112, 35);
+            this.BotonGuardar.Size = new System.Drawing.Size(75, 23);
             this.BotonGuardar.TabIndex = 6;
             this.BotonGuardar.Text = "Registrar";
             this.BotonGuardar.UseVisualStyleBackColor = true;
@@ -153,19 +146,17 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(158, 32);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDni.Location = new System.Drawing.Point(105, 21);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(167, 26);
+            this.txtDni.Size = new System.Drawing.Size(113, 20);
             this.txtDni.TabIndex = 0;
             // 
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(52, 37);
-            this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDni.Location = new System.Drawing.Point(35, 24);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(37, 20);
+            this.lblDni.Size = new System.Drawing.Size(26, 13);
             this.lblDni.TabIndex = 9;
             this.lblDni.Text = "DNI";
             // 
@@ -188,9 +179,11 @@
             this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Location = new System.Drawing.Point(12, 44);
+            this.groupBox1.Location = new System.Drawing.Point(8, 29);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 353);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(271, 229);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Cliente";
@@ -198,26 +191,27 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(342, 32);
+            this.txtId.Location = new System.Drawing.Point(228, 21);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(44, 26);
+            this.txtId.Size = new System.Drawing.Size(31, 20);
             this.txtId.TabIndex = 5;
             this.txtId.Visible = false;
             // 
             // cmbCuit
             // 
             this.cmbCuit.FormattingEnabled = true;
-            this.cmbCuit.Location = new System.Drawing.Point(158, 188);
+            this.cmbCuit.Location = new System.Drawing.Point(105, 122);
+            this.cmbCuit.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCuit.Name = "cmbCuit";
-            this.cmbCuit.Size = new System.Drawing.Size(167, 28);
+            this.cmbCuit.Size = new System.Drawing.Size(113, 21);
             this.cmbCuit.TabIndex = 5;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(167, 286);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnModificar.Location = new System.Drawing.Point(111, 186);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(112, 35);
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -225,10 +219,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(287, 286);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(191, 186);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(112, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -237,19 +230,21 @@
             // dgwClientes
             // 
             this.dgwClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwClientes.Location = new System.Drawing.Point(433, 208);
+            this.dgwClientes.Location = new System.Drawing.Point(289, 199);
+            this.dgwClientes.Margin = new System.Windows.Forms.Padding(2);
             this.dgwClientes.Name = "dgwClientes";
             this.dgwClientes.RowTemplate.Height = 28;
-            this.dgwClientes.Size = new System.Drawing.Size(693, 189);
+            this.dgwClientes.Size = new System.Drawing.Size(462, 155);
             this.dgwClientes.TabIndex = 2;
             this.dgwClientes.CurrentCellChanged += new System.EventHandler(this.dgwClientes_CurrentCellChanged);
             // 
             // lblDniSearch
             // 
             this.lblDniSearch.AutoSize = true;
-            this.lblDniSearch.Location = new System.Drawing.Point(229, 29);
+            this.lblDniSearch.Location = new System.Drawing.Point(153, 19);
+            this.lblDniSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDniSearch.Name = "lblDniSearch";
-            this.lblDniSearch.Size = new System.Drawing.Size(37, 20);
+            this.lblDniSearch.Size = new System.Drawing.Size(26, 13);
             this.lblDniSearch.TabIndex = 3;
             this.lblDniSearch.Text = "DNI";
             this.lblDniSearch.Click += new System.EventHandler(this.lblDniSearch_Click);
@@ -257,9 +252,10 @@
             // lblCarnetSearch
             // 
             this.lblCarnetSearch.AutoSize = true;
-            this.lblCarnetSearch.Location = new System.Drawing.Point(210, 67);
+            this.lblCarnetSearch.Location = new System.Drawing.Point(140, 44);
+            this.lblCarnetSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCarnetSearch.Name = "lblCarnetSearch";
-            this.lblCarnetSearch.Size = new System.Drawing.Size(77, 20);
+            this.lblCarnetSearch.Size = new System.Drawing.Size(53, 13);
             this.lblCarnetSearch.TabIndex = 4;
             this.lblCarnetSearch.Text = "N° Carnet";
             this.lblCarnetSearch.Click += new System.EventHandler(this.label6_Click);
@@ -272,19 +268,20 @@
             this.gbBusqueda.Controls.Add(this.txtDniSearch);
             this.gbBusqueda.Controls.Add(this.lblDniSearch);
             this.gbBusqueda.Controls.Add(this.lblCarnetSearch);
-            this.gbBusqueda.Location = new System.Drawing.Point(433, 44);
+            this.gbBusqueda.Location = new System.Drawing.Point(289, 29);
+            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(693, 158);
+            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(2);
+            this.gbBusqueda.Size = new System.Drawing.Size(462, 103);
             this.gbBusqueda.TabIndex = 17;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "Busqueda";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(347, 100);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Location = new System.Drawing.Point(231, 65);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 35);
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -292,41 +289,61 @@
             // 
             // txtCarnetSearch
             // 
-            this.txtCarnetSearch.Location = new System.Drawing.Point(314, 64);
-            this.txtCarnetSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCarnetSearch.Location = new System.Drawing.Point(209, 42);
             this.txtCarnetSearch.Name = "txtCarnetSearch";
-            this.txtCarnetSearch.Size = new System.Drawing.Size(169, 26);
+            this.txtCarnetSearch.Size = new System.Drawing.Size(114, 20);
             this.txtCarnetSearch.TabIndex = 1;
             // 
             // txtDniSearch
             // 
-            this.txtDniSearch.Location = new System.Drawing.Point(314, 23);
-            this.txtDniSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDniSearch.Location = new System.Drawing.Point(209, 15);
             this.txtDniSearch.Name = "txtDniSearch";
-            this.txtDniSearch.Size = new System.Drawing.Size(169, 26);
+            this.txtDniSearch.Size = new System.Drawing.Size(114, 20);
             this.txtDniSearch.TabIndex = 0;
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(12, 1);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegresar.Location = new System.Drawing.Point(8, 1);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(143, 35);
+            this.btnRegresar.Size = new System.Drawing.Size(95, 23);
             this.btnRegresar.TabIndex = 18;
             this.btnRegresar.Text = "Volver al Menu";
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // gbOrdenar
+            // 
+            this.gbOrdenar.BackColor = System.Drawing.Color.Transparent;
+            this.gbOrdenar.Controls.Add(this.nuevo);
+            this.gbOrdenar.Location = new System.Drawing.Point(289, 136);
+            this.gbOrdenar.Margin = new System.Windows.Forms.Padding(2);
+            this.gbOrdenar.Name = "gbOrdenar";
+            this.gbOrdenar.Padding = new System.Windows.Forms.Padding(2);
+            this.gbOrdenar.Size = new System.Drawing.Size(462, 47);
+            this.gbOrdenar.TabIndex = 19;
+            this.gbOrdenar.TabStop = false;
+            this.gbOrdenar.Text = "Ordenar por apellido";
+            // 
+            // nuevo
+            // 
+            this.nuevo.Location = new System.Drawing.Point(191, 13);
+            this.nuevo.Name = "nuevo";
+            this.nuevo.Size = new System.Drawing.Size(75, 23);
+            this.nuevo.TabIndex = 20;
+            this.nuevo.Text = "Ordenar";
+            this.nuevo.UseVisualStyleBackColor = true;
+            this.nuevo.Click += new System.EventHandler(this.nuevo_Click);
+            // 
             // AltaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 557);
+            this.ClientSize = new System.Drawing.Size(782, 379);
+            this.Controls.Add(this.gbOrdenar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgwClientes);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AltaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Cliente";
@@ -336,6 +353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwClientes)).EndInit();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
+            this.gbOrdenar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,5 +385,7 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.ComboBox cmbCuit;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.GroupBox gbOrdenar;
+        private System.Windows.Forms.Button nuevo;
     }
 }

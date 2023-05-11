@@ -76,6 +76,11 @@ namespace Vistas
             producto.Show();
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
        
     }
 }

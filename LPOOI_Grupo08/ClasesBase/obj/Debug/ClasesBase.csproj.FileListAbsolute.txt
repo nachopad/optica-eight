@@ -33,3 +33,4 @@ E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\Cl
 E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
 D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
