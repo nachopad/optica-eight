@@ -64,6 +64,12 @@ namespace Vistas
             dgwProductos.DataSource = ProductoABM.list_producto_order_by_Categoria();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormFiltroProducto tablaFiltro = new FormFiltroProducto();
+            tablaFiltro.Show();
+        }
+
        
     }
 }

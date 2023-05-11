@@ -40,10 +40,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioDescripcion = new System.Windows.Forms.RadioButton();
             this.radioCategoria = new System.Windows.Forms.RadioButton();
+            this.radioDescripcion = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.dgwProductos = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).BeginInit();
@@ -136,9 +137,9 @@
             this.groupBox1.Controls.Add(this.txtCategoria);
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Location = new System.Drawing.Point(56, 46);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(232, 198);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -147,7 +148,7 @@
             // btnRegresar
             // 
             this.btnRegresar.Location = new System.Drawing.Point(11, 2);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(93, 26);
             this.btnRegresar.TabIndex = 1;
@@ -168,14 +169,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Consulta";
             // 
-            // label5
+            // radioCategoria
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(194, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Ordenar por:";
+            this.radioCategoria.AutoSize = true;
+            this.radioCategoria.Location = new System.Drawing.Point(252, 45);
+            this.radioCategoria.Name = "radioCategoria";
+            this.radioCategoria.Size = new System.Drawing.Size(70, 17);
+            this.radioCategoria.TabIndex = 2;
+            this.radioCategoria.TabStop = true;
+            this.radioCategoria.Text = "Categoria";
+            this.radioCategoria.UseVisualStyleBackColor = true;
+            this.radioCategoria.CheckedChanged += new System.EventHandler(this.radioCategoria_CheckedChanged);
             // 
             // radioDescripcion
             // 
@@ -189,17 +193,14 @@
             this.radioDescripcion.UseVisualStyleBackColor = true;
             this.radioDescripcion.CheckedChanged += new System.EventHandler(this.radioDescripcion_CheckedChanged);
             // 
-            // radioCategoria
+            // label5
             // 
-            this.radioCategoria.AutoSize = true;
-            this.radioCategoria.Location = new System.Drawing.Point(252, 45);
-            this.radioCategoria.Name = "radioCategoria";
-            this.radioCategoria.Size = new System.Drawing.Size(70, 17);
-            this.radioCategoria.TabIndex = 2;
-            this.radioCategoria.TabStop = true;
-            this.radioCategoria.Text = "Categoria";
-            this.radioCategoria.UseVisualStyleBackColor = true;
-            this.radioCategoria.CheckedChanged += new System.EventHandler(this.radioCategoria_CheckedChanged);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(194, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ordenar por:";
             // 
             // dgwProductos
             // 
@@ -209,11 +210,22 @@
             this.dgwProductos.Size = new System.Drawing.Size(497, 117);
             this.dgwProductos.TabIndex = 3;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(109, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 26);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Ver Productos Vendidos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // AltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 261);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dgwProductos);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnRegresar);
@@ -248,5 +260,6 @@
         private System.Windows.Forms.RadioButton radioDescripcion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgwProductos;
+        private System.Windows.Forms.Button button2;
     }
 }

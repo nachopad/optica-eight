@@ -103,3 +103,8 @@ C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.Alt
 C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltrarVenta.resources
 C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVenta.resources
 C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVerVentas.resources
+D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaUsuario.resources
+D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltrarVenta.resources
+D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltroProducto.resources
+D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVenta.resources
+D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVerVentas.resources

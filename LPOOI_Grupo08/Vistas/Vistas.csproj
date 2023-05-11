@@ -76,6 +76,12 @@
     <Compile Include="FormFiltrarVenta.Designer.cs">
       <DependentUpon>FormFiltrarVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFiltroProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltroProducto.Designer.cs">
+      <DependentUpon>FormFiltroProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormFiltrarVenta.resx">
       <DependentUpon>FormFiltrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltroProducto.resx">
+      <DependentUpon>FormFiltroProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>

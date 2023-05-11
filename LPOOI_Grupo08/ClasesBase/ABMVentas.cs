@@ -140,6 +140,25 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
-        } 
+        }
+
+        //Metodo para obtener registros de ventas de un producto en un periodo de tiempo
+        public static DataTable get_SalesByDate(String fechaInicio, String fechaFinal)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "get_SalesByDate";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+            cmd.Parameters.AddWithValue("@fechaFinal", fechaFinal);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.Connection = cnn;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+
+        }
+
     }
 }
