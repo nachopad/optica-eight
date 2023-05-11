@@ -70,6 +70,12 @@ namespace Vistas
             tablaFiltro.Show();
         }
 
+        private void btnProductosVendidosByCliente_Click(object sender, EventArgs e)
+        {
+            FormProductosVendidosByCliente producto = new FormProductosVendidosByCliente();
+            producto.Show();
+        }
+
        
     }
 }

@@ -92,5 +92,27 @@ namespace ClasesBase
 
             return dt;
         }
+
+        public static DataTable list_productosByCliente(string dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "list_productosByCliente_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            // Parametro de Entrada
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            //Ejecutar la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el data table
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
     }
 }

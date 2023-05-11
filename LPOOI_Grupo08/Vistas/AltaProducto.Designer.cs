@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgwProductos = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnProductosVendidosByCliente = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProductos)).BeginInit();
@@ -220,11 +221,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnProductosVendidosByCliente
+            // 
+            this.btnProductosVendidosByCliente.Location = new System.Drawing.Point(270, 2);
+            this.btnProductosVendidosByCliente.Name = "btnProductosVendidosByCliente";
+            this.btnProductosVendidosByCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnProductosVendidosByCliente.TabIndex = 5;
+            this.btnProductosVendidosByCliente.Text = "Ver Productos Vendidos por Cliente";
+            this.btnProductosVendidosByCliente.UseVisualStyleBackColor = true;
+            this.btnProductosVendidosByCliente.Click += new System.EventHandler(this.btnProductosVendidosByCliente_Click);
+            // 
             // AltaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 261);
+            this.Controls.Add(this.btnProductosVendidosByCliente);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dgwProductos);
             this.Controls.Add(this.groupBox2);
@@ -261,5 +273,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgwProductos;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnProductosVendidosByCliente;
     }
 }

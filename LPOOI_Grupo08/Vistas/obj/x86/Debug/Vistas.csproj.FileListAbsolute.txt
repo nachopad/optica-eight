@@ -108,3 +108,7 @@ D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFilt
 D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltroProducto.resources
 D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVenta.resources
 D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVerVentas.resources
+C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaUsuario.resources
+C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltrarVenta.resources
+C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltroProducto.resources
+C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormProductosVendidosByCliente.resources

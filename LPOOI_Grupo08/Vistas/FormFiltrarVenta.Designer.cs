@@ -31,10 +31,10 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.tablaFechas = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.fechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.fechaFinal = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.fechaInicio = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.tablaFechas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,13 +72,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
             // 
-            // fechaInicio
+            // label2
             // 
-            this.fechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaInicio.Location = new System.Drawing.Point(30, 38);
-            this.fechaInicio.Name = "fechaInicio";
-            this.fechaInicio.Size = new System.Drawing.Size(109, 20);
-            this.fechaInicio.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Fecha Final";
             // 
             // fechaFinal
             // 
@@ -98,15 +100,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Fecha Inicio";
             // 
-            // label2
+            // fechaInicio
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Fecha Final";
+            this.fechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaInicio.Location = new System.Drawing.Point(30, 38);
+            this.fechaInicio.Name = "fechaInicio";
+            this.fechaInicio.Size = new System.Drawing.Size(109, 20);
+            this.fechaInicio.TabIndex = 1;
             // 
             // FormFiltrarVenta
             // 
@@ -116,6 +116,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tablaFechas);
             this.Name = "FormFiltrarVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormFiltrarVenta";
             this.Load += new System.EventHandler(this.FormFiltrarVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaFechas)).EndInit();
