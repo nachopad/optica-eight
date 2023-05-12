@@ -59,7 +59,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.fechaFinal);
             this.groupBox1.Controls.Add(this.label1);
@@ -78,7 +78,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(39, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Fecha Final";
             // 
@@ -96,7 +96,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.Size = new System.Drawing.Size(95, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Fecha Inicio";
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(this.tablaFechas);
             this.Name = "FormFiltrarVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormFiltrarVenta";
+            this.Text = "Filtro de venta por fecha";
             this.Load += new System.EventHandler(this.FormFiltrarVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaFechas)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -95,7 +95,7 @@
             this.Controls.Add(this.dgwProductosCliente);
             this.Name = "FormProductosVendidosByCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProductosVendidosByCliente";
+            this.Text = "Filtro de Productos vendidos por Cliente";
             this.Load += new System.EventHandler(this.FormProductosVendidosByCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwProductosCliente)).EndInit();
             this.groupBox1.ResumeLayout(false);
