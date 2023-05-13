@@ -88,7 +88,7 @@ namespace Vistas
 
         public void verificar_login(string usuario, string rolCodigo)
         {
-            if(rolCodigo == "1")
+            if(rolCodigo == "3")
             {
                 navCliente.Visible = false;
                 navVenta.Visible = false;
