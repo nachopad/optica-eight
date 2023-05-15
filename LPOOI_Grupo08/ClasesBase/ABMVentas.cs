@@ -15,8 +15,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "INSERT INTO Venta (ven_fecha, cli_dni) values(@fecha,@dni)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert_venta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@fecha", fecha);
@@ -34,8 +34,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT * From Venta";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_venta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -84,8 +84,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT TOP 1 * FROM Venta WHERE cli_dni = @dni ORDER BY ven_nro DESC ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "get_NroVenta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", dni);
@@ -102,8 +102,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "INSERT INTO VentaDetalle (ven_nro, prod_codigo, det_precio, det_cantidad, det_total) values(@vnro, @cod, @precio, @cantidad, @total)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert_ventaDetalle_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@vnro", vnro);
