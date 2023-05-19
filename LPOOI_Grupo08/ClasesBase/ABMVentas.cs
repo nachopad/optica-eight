@@ -15,8 +15,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "INSERT INTO Venta (ven_fecha, cli_dni) values(@fecha,@dni)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert_venta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@fecha", fecha);
@@ -34,8 +34,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT * From Venta";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_venta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -45,13 +45,47 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable list_ventasByCliente(string dni)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "list_ventasByCliente_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@dni", dni);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable get_clientes_sp()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "get_clientes_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        } 
+
         public static int get_NroVenta(string dni)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT TOP 1 * FROM Venta WHERE cli_dni = @dni ORDER BY ven_nro DESC ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "get_NroVenta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", dni);
@@ -68,8 +102,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "INSERT INTO VentaDetalle (ven_nro, prod_codigo, det_precio, det_cantidad, det_total) values(@vnro, @cod, @precio, @cantidad, @total)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert_ventaDetalle_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@vnro", vnro);
@@ -83,5 +117,44 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public static DataTable filterSales(string fechaInicio, string fechaFinal)
+        {
+
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "get_FilterSales";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@fechaInicio",fechaInicio+" 03:00:00");
+            cmd.Parameters.AddWithValue("@fechaFinal",fechaFinal+" 23:00:00");
+            cmd.Connection = cnn;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt; 
+        }
+
+        //Metodo para obtener registros de ventas de un producto en un periodo de tiempo
+        public static DataTable get_SalesByDate(String fechaInicio, String fechaFinal)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "get_SalesByDate";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+            cmd.Parameters.AddWithValue("@fechaFinal", fechaFinal);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.Connection = cnn;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+
+        }
+
     }
 }

@@ -50,9 +50,9 @@ namespace Vistas
                     var respuesta = MessageBox.Show("¿Está seguro que desea registrar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
-                        if(UsuarioABM.search_username(oUser.Usu_NombreUsuario)==true)
+                        if(UsuarioABM.search_username_sp(oUser.Usu_NombreUsuario)==true)
                         {
-                            UsuarioABM.insert_usuario(oUser);
+                            UsuarioABM.insert_usuario_sp(oUser);
                             load_usuarios();
                             cmbRol.Text = null;
                             txtApellidoNombre.Text = null;
@@ -79,7 +79,7 @@ namespace Vistas
             var respuesta = MessageBox.Show("¿Está seguro que desea eliminar el usuario?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                UsuarioABM.delete_usuario(txtId.Text);
+                UsuarioABM.delete_usuario_sp(txtId.Text);
                 MessageBox.Show("Datos del usuario eliminados exitosamente", "Aviso");
                 load_usuarios();
                 txtId.Text = null;
@@ -115,9 +115,9 @@ namespace Vistas
                     var respuesta = MessageBox.Show("¿Está seguro que desea modificar los datos?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.Yes)
                     {
-                        if (UsuarioABM.search_username(usuario.Usu_NombreUsuario) == true)
+                        if (UsuarioABM.get_id_usuario_sp(usuario.Usu_NombreUsuario).Equals(txtId.Text) || (UsuarioABM.get_id_usuario_sp(usuario.Usu_NombreUsuario).Equals("null")))
                         {
-                            UsuarioABM.modify_cliente(usuario);
+                            UsuarioABM.modify_usuario_sp(usuario);
                             MessageBox.Show("Datos modificados exitosamente", "Aviso");
                             load_usuarios();
                         }
@@ -135,7 +135,7 @@ namespace Vistas
         {
             if (txtUsuarioSearch.Text != "")
             {
-                dgwUsuarios.DataSource = UsuarioABM.search_usuarios(txtUsuarioSearch.Text);
+                dgwUsuarios.DataSource = UsuarioABM.search_usuarios_sp(txtUsuarioSearch.Text);
             }
             else
             {
@@ -147,12 +147,12 @@ namespace Vistas
         {
             cmbRol.DisplayMember = "rol_descripcion";
             cmbRol.ValueMember = "rol_codigo";
-            cmbRol.DataSource = UsuarioABM.list_roles();
+            cmbRol.DataSource = UsuarioABM.list_roles_sp();
         }
 
         private void load_usuarios()
         {
-            dgwUsuarios.DataSource = UsuarioABM.list_usuarios();
+            dgwUsuarios.DataSource = UsuarioABM.list_usuarios_sp();
         }
 
         private void AltaUsuario_Load(object sender, EventArgs e)
@@ -189,6 +189,11 @@ namespace Vistas
         }
 
         private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgwUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

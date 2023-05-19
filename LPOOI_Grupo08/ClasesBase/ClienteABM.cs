@@ -10,13 +10,13 @@ namespace ClasesBase
     public class ClienteABM
     {
 
-        public static void insert_cliente(Cliente cliente)
+        public static void insert_cliente_sp(Cliente cliente)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Cliente(cli_dni,cli_apellido,cli_nombre,cli_direccion,os_cuit,cli_nro_carnet) values(@dni,@ape,@nom,@dire,@cuit,@carnet)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert_cliente_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", cliente.Cli_Dni);
@@ -31,13 +31,13 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static void modify_cliente(Cliente cliente)
+        public static void modify_cliente_sp(Cliente cliente)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Cliente set cli_dni=@dni, cli_apellido=@ape, cli_nombre=@nom, cli_direccion=@dire, os_cuit=@cuit, cli_nro_carnet=@carnet WHERE cli_id = @id ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "modify_cliente_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@id", cliente.Cli_Id);
@@ -53,18 +53,13 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static DataTable list_clientes()
+        public static DataTable list_clientes_sp()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT ";
-            cmd.CommandText += "cli_id, ";
-            cmd.CommandText += " cli_dni as 'DNI', ";
-            cmd.CommandText += " cli_apellido as 'Apellido', cli_nombre as 'Nombre', ";
-            cmd.CommandText += " cli_direccion as 'Direccion', os_cuit as 'CUIT', cli_nro_carnet as 'N° Carnet' ";
-            cmd.CommandText += " FROM Cliente as C";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_clientes_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             //Ejecuta la consulta
@@ -77,13 +72,13 @@ namespace ClasesBase
         }
 
         
-        public static DataTable list_ObrasSocialesCuit()
+        public static DataTable list_ObrasSocialesCuit_sp()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM ObraSocial";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_ObrasSocialesCuit_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             //Ejecuta la consulta
@@ -96,22 +91,14 @@ namespace ClasesBase
             return dt;
         }
         
-        public static DataTable search_clientes(string dni, string nroCarnet)
+        public static DataTable search_clientes_sp(string dni, string nroCarnet)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT ";
-            cmd.CommandText += "cli_id, ";
-            cmd.CommandText += " cli_dni as 'DNI', ";
-            cmd.CommandText += " cli_apellido as 'Apellido', cli_nombre as 'Nombre', ";
-            cmd.CommandText += " cli_direccion as 'Direccion', os_cuit as 'CUIT', cli_nro_carnet as 'N° Carnet' ";
-            cmd.CommandText += " FROM Cliente as C";
+            cmd.CommandText = "search_clientes_sp";
 
-            cmd.CommandText += " WHERE";
-            cmd.CommandText += " cli_dni LIKE @dni AND cli_nro_carnet LIKE @nroCarnet ";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", "%" + dni + "%");
@@ -127,14 +114,14 @@ namespace ClasesBase
             return dt;
         }
 
-        public static void delete_cliente(string dniCliente)
+        public static void delete_cliente_sp(string dniCliente)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "DELETE FROM Cliente WHERE cli_dni LIKE @dni";
+            cmd.CommandText = "delete_cliente_sp";
 
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", "%" + dniCliente + "%");
@@ -148,23 +135,48 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static Boolean search_dni(string dni)
+        public static Boolean search_dni_sp(string dni)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT COUNT(*) FROM Cliente WHERE cli_dni = @dni";
+            cmd.CommandText = "search_dni_sp";
 
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@dni", dni);
 
+            cmd.Parameters.Add("@count_client", SqlDbType.Int);
+            cmd.Parameters["@count_client"].Direction = ParameterDirection.Output;
+
             cnn.Open();
-            int count = (int)cmd.ExecuteScalar();
+            cmd.ExecuteNonQuery();
             cnn.Close();
-            return count == 0;
-            
+
+            return ((int)cmd.Parameters["@count_client"].Value) == 0;
+        }
+
+
+        public static DataTable ordenar_clientes_apellidos_sp()
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "ordenar_clientes_apellidos_sp";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Connection = cnn;
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Llena los datos de la consulta en el DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
         }
 
     }

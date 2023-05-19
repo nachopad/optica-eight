@@ -36,6 +36,8 @@ namespace ClasesBase
             set { prod_Precio = value; }
         }
 
+        public Producto(){
+        }
         public Producto(string codigo, string categoria, string descripcion, decimal precio)
         {
             prod_Codigo = codigo;

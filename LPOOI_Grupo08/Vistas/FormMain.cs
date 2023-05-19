@@ -88,7 +88,7 @@ namespace Vistas
 
         public void verificar_login(string usuario, string rolCodigo)
         {
-            if(rolCodigo == "1")
+            if(rolCodigo == "3")
             {
                 navCliente.Visible = false;
                 navVenta.Visible = false;
@@ -101,7 +101,7 @@ namespace Vistas
                 navObraSocial.Visible = false;
             }
             nomUsu.Text = usuario;
-            tipoUsu.Text = UsuarioABM.get_rolDescripcion(rolCodigo);
+            tipoUsu.Text = UsuarioABM.get_rolDescripcion_sp(rolCodigo);
         }
 
         private void FormMain_Load(object sender, EventArgs e)

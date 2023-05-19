@@ -25,3 +25,18 @@ C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
+E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll
+E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
+E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
+E:\usuarios\alumno\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+D:\FACULTAD\lpoo\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb

@@ -70,6 +70,18 @@
     <Compile Include="AltaUsuario.Designer.cs">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFiltrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltrarVenta.Designer.cs">
+      <DependentUpon>FormFiltrarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFiltroProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltroProducto.Designer.cs">
+      <DependentUpon>FormFiltroProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductosVendidosByCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductosVendidosByCliente.Designer.cs">
+      <DependentUpon>FormProductosVendidosByCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVenta.cs">
       <SubType>Form</SubType>
@@ -108,11 +126,20 @@
     <EmbeddedResource Include="AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltrarVenta.resx">
+      <DependentUpon>FormFiltrarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltroProducto.resx">
+      <DependentUpon>FormFiltroProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductosVendidosByCliente.resx">
+      <DependentUpon>FormProductosVendidosByCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVenta.resx">
       <DependentUpon>FormVenta.cs</DependentUpon>

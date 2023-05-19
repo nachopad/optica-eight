@@ -69,7 +69,7 @@ namespace Vistas
             try
             {
                 UsuarioABM usuarioABM = new UsuarioABM();
-                string rolCodigo = usuarioABM.verificar_loginBD(txtUsername.Text, txtPassword.Text);
+                string rolCodigo = usuarioABM.verificar_loginBD_sp(txtUsername.Text, txtPassword.Text);
                 MessageBox.Show("Bienvenido de nuevo " + txtUsername.Text, "Acceso al Sistema");
                 formLogin.ActiveForm.Hide();
                 FormMain principal = new FormMain();
