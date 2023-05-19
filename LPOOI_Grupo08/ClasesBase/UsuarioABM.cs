@@ -10,13 +10,13 @@ namespace ClasesBase
     public class UsuarioABM
     {
 
-        public static void insert_usuario(Usuario user)
+        public static void insert_usuario_sp(Usuario user)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Usuario(rol_codigo,usu_apellido_nombre,usu_nombre_usuario,usu_contrasenia) values(@rol,@ape,@usu,@pass)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert_usuario_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@rol", user.Rol_Id);
@@ -29,13 +29,13 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static void modify_cliente(Usuario usuario)
+        public static void modify_usuario_sp(Usuario usuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Usuario set usu_nombre_usuario=@usu, usu_contrasenia=@pas, usu_apellido_nombre=@ape, rol_codigo=@cod WHERE usu_id=@id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "modify_usuario_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@id", usuario.Usu_ID);
@@ -49,14 +49,13 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static void delete_usuario(string idUsuario)
+        public static void delete_usuario_sp(string idUsuario)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "DELETE FROM Usuario WHERE usu_id LIKE @id";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete_usuario_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@id", "%" + idUsuario + "%");
@@ -70,24 +69,14 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static DataTable search_usuarios(string sPattern)
+        public static DataTable search_usuarios_sp(string sPattern)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT ";
-            cmd.CommandText += " usu_id, ";
-            cmd.CommandText += " rol_descripcion as 'Rol', ";
-            cmd.CommandText += " usu_apellido_nombre as 'Apellido y Nombre', ";
-            cmd.CommandText += " usu_nombre_usuario as 'Usuario', usu_contrasenia as 'Contraseña', ";
-            cmd.CommandText += " U.rol_codigo ";
-            cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_codigo=U.rol_codigo)";
+            cmd.CommandText = "search_usuarios_sp";
 
-            cmd.CommandText += " WHERE";
-            cmd.CommandText += " usu_nombre_usuario LIKE @pattern ";
-
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
@@ -102,13 +91,13 @@ namespace ClasesBase
             return dt;
         }
 
-        public static DataTable list_roles()
+        public static DataTable list_roles_sp()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Roles";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_roles_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             //Ejecuta la consulta
@@ -121,20 +110,13 @@ namespace ClasesBase
             return dt;
         }
 
-        public static DataTable list_usuarios()
+        public static DataTable list_usuarios_sp()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT ";
-            cmd.CommandText += " usu_id, ";
-            cmd.CommandText += " rol_descripcion as 'Rol', ";
-            cmd.CommandText += " usu_apellido_nombre as 'Apellido y Nombre', ";
-            cmd.CommandText += " usu_nombre_usuario as 'Usuario', usu_contrasenia as 'Contraseña', ";
-            cmd.CommandText += " U.rol_codigo ";
-            cmd.CommandText += " FROM Usuario as U";
-            cmd.CommandText += " LEFT JOIN Roles as R ON (R.rol_codigo=U.rol_codigo)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_usuarios_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             //Ejecuta la consulta
@@ -147,14 +129,14 @@ namespace ClasesBase
             return dt;
         }
 
-        public string verificar_loginBD(string username, string contrasena)
+        public string verificar_loginBD_sp(string username, string contrasena)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
-            SqlCommand cmd = new SqlCommand("SELECT usu_nombre_usuario, rol_codigo FROM Usuario WHERE usu_nombre_usuario LIKE @usuario AND usu_contrasenia LIKE @pas ");
+            SqlCommand cmd = new SqlCommand("verificar_loginBD_sp");
             cmd.Parameters.AddWithValue("usuario", username);
             cmd.Parameters.AddWithValue("pas", contrasena);
 
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -163,13 +145,13 @@ namespace ClasesBase
             return dt.Rows[0][1].ToString();
         }
 
-        public static string get_rolDescripcion(string rolCod)
+        public static string get_rolDescripcion_sp(string rolCod)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT * FROM Roles WHERE rol_codigo = @cod";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "get_rolDescripcion_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@cod", rolCod);
@@ -181,14 +163,14 @@ namespace ClasesBase
             return dt.Rows[0]["rol_descripcion"].ToString();
         }
 
-        public static Boolean search_username(string username)
+        public static Boolean search_username_sp(string username)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT COUNT(*) FROM Usuario WHERE usu_nombre_usuario = @us";
+            cmd.CommandText = "search_username_sp";
 
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@us", username);
@@ -197,6 +179,32 @@ namespace ClasesBase
             int count = (int)cmd.ExecuteScalar();
             cnn.Close();
             return count == 0;
+        }
+
+        public static string get_id_usuario_sp(string username)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "get_id_usuario_sp";
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@us", username);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            try
+            {
+                return dt.Rows[0]["usu_id"].ToString();
+            }
+            catch
+            {
+                return "null";
+            }
         }
 
     }

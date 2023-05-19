@@ -62,7 +62,7 @@ namespace Vistas
 
                 // Me permite obtener el nro de venta
                 int nro = ABMVentas.get_NroVenta(cmbCliente.SelectedValue.ToString());
-                decimal precio = ProductoABM.get_Precio(cmbProducto.SelectedValue.ToString());
+                decimal precio = ProductoABM.get_Precio_sp(cmbProducto.SelectedValue.ToString());
 
                 //Detalle Venta
                 decimal total = precio * Convert.ToDecimal(txtCantidad.Text);
@@ -82,7 +82,7 @@ namespace Vistas
 
         private void load_precio()
         {
-           decimal precio = ProductoABM.get_Precio(cmbProducto.SelectedValue.ToString());
+           decimal precio = ProductoABM.get_Precio_sp(cmbProducto.SelectedValue.ToString());
            txtPrecio.Text = "$" + precio.ToString();
         }
 
@@ -105,7 +105,7 @@ namespace Vistas
                     }
                     else
                     {
-                        decimal precio = ProductoABM.get_Precio(cmbProducto.SelectedValue.ToString());
+                        decimal precio = ProductoABM.get_Precio_sp(cmbProducto.SelectedValue.ToString());
                         decimal total = precio * Convert.ToDecimal(txtCantidad.Text);
                         txtTotal.Text = "$"+total.ToString();
                     }

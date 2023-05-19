@@ -14,8 +14,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT * FROM producto";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "list_productos_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             //Ejecutar la consulta
@@ -28,14 +28,13 @@ namespace ClasesBase
             return dt;
         }
 
-        // Creo que lo puedo hacer en el FormVenta. Pero tengo entendido que en la vista no se tendria que hacer este tipo de acciones.
-        public static decimal get_Precio(string cod)
+        public static decimal get_Precio_sp(string cod)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "SELECT * FROM producto WHERE prod_codigo = @cod ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "get_Precio_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
             cmd.Parameters.AddWithValue("@cod", cod);
@@ -49,6 +48,7 @@ namespace ClasesBase
 
             return Convert.ToDecimal(dt.Rows[0]["prod_precio"].ToString());
         }
+
         //Este metodo permitira obtener lalista ordenada por Categoria
         public static DataTable list_producto_order_by_Categoria()
         {
