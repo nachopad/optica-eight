@@ -193,6 +193,7 @@
             // 
             // dtpFechaVenta
             // 
+            this.dtpFechaVenta.Enabled = false;
             this.dtpFechaVenta.Location = new System.Drawing.Point(8, 240);
             this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
