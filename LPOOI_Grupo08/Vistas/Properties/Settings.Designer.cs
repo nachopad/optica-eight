@@ -26,9 +26,8 @@ namespace Vistas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Users\\Cuno\\Documents\\LPOO.Grupo08\\LP" +
-            "OOI_Grupo08\\optica.mdf;Integrated Security=True;Connect Timeout=30;User Instance" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=C:\\Program Files (x86)\\Grupo08\\OpticaSe" +
+            "tup\\optica.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True")]
         public string opticaConnectionString {
             get {
                 return ((string)(this["opticaConnectionString"]));

@@ -13,12 +13,6 @@ C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBa
 C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\Cuno\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
-C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
-C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll
-C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
-C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
-C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
-C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
@@ -40,3 +34,8 @@ C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\
 C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
 C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\Lilia\Documents\Visual Studio 2010\Projects\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
