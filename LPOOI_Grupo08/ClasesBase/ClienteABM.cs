@@ -155,6 +155,7 @@ namespace ClasesBase
             cnn.Close();
 
             return ((int)cmd.Parameters["@count_client"].Value) == 0;
+            //VER COMO MODIFICAR (search_dni_sp)
         }
 
 

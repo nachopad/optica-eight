@@ -34,36 +34,19 @@ namespace Vistas
             dgwVenta.DataSource = ABMVentas.list_venta();
         }
 
-        //agregue yo
-        private void load_combo_clientes()
-        {
-            cmbFiltroCliente.DisplayMember = "cli_dni";
-            cmbFiltroCliente.ValueMember = "cli_dni";
-            cmbFiltroCliente.DataSource = ABMVentas.get_clientes_sp();
-        }
-
         private void FormVerVentas_Load(object sender, EventArgs e)
         {
             load_venta();
-            load_combo_clientes();
         }
 
         private void dgwVenta_CurrentCellChanged(object sender, EventArgs e)
         {
             if (dgwVenta.CurrentRow != null)
             {
-                txtNVenta.Text = dgwVenta.CurrentRow.Cells["ven_nro"].Value.ToString();
-                txtFechaVenta.Text = dgwVenta.CurrentRow.Cells["ven_fecha"].Value.ToString();
-                txtDNI.Text = dgwVenta.CurrentRow.Cells["cli_dni"].Value.ToString();
+                txtNVenta.Text = dgwVenta.CurrentRow.Cells["N°"].Value.ToString();
+                txtFechaVenta.Text = dgwVenta.CurrentRow.Cells["Fecha"].Value.ToString();
+                txtDNI.Text = dgwVenta.CurrentRow.Cells["Cliente"].Value.ToString();
             }
-        }
-
-        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            cmbFiltroCliente.Text = null;
-            load_venta();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -71,22 +54,29 @@ namespace Vistas
             this.Close();
         }
 
-        private void cmbFiltroCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dgwVenta.DataSource = ABMVentas.list_ventasByCliente(cmbFiltroCliente.Text);
-        }
-
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            cmbFiltroCliente.Text = null;
             load_venta();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnFecha_Click(object sender, EventArgs e)
         {
             FormFiltrarVenta filtrar = new FormFiltrarVenta();
             filtrar.Show();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if ((String.IsNullOrEmpty(txtDniSearch.Text)))
+            {
+                load_venta();
+            }
+            else
+            {
+                dgwVenta.DataSource = ABMVentas.list_ventasByCliente(txtDniSearch.Text);
+            }
+        }
+
 
     }
 }
