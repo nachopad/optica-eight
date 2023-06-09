@@ -15,19 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1E995BA62CE44F1B87B316CCBE365F14"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7391F6E5B3604D888147DC3E82DA349F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8A63F52320794C649D6EFB9606F310DA"
+        "MsmKey" = "8:_76438CF46E5F48E8A4B871521B60B774"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AAF323D9C49444FCA26AA47B3C271D97"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -160,7 +160,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E995BA62CE44F1B87B316CCBE365F14"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_76438CF46E5F48E8A4B871521B60B774"
             {
             "SourcePath" = "8:..\\optica_log.LDF"
             "TargetName" = "8:optica_log.LDF"
@@ -180,7 +180,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8A63F52320794C649D6EFB9606F310DA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AAF323D9C49444FCA26AA47B3C271D97"
             {
             "SourcePath" = "8:..\\optica.mdf"
             "TargetName" = "8:optica.mdf"
@@ -207,11 +207,6 @@
             "AssemblyAsmDisplayName" = "8:ClasesBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F8384009A529217933F69D49D177FA5F"
-                    {
-                    "Name" = "8:ClasesBase.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ClasesBase.dll"
             "TargetName" = "8:"
@@ -278,6 +273,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AF1764D39D934A04B39F090A0957B16F"
+                    {
+                    "Name" = "8:Sist. Gestion Optica"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_23B51CE74FC84ADC991D825350F9F8B8"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_546BFACF36714F42985AD8389799F7E2"
@@ -306,9 +312,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:OpticaSetup"
+        "ProductName" = "8:Sist. Gestion Optica"
         "ProductCode" = "8:{1C0AF6E0-1DC3-4EB9-9E4A-C4B768103C2F}"
-        "PackageCode" = "8:{B8DB323F-EB41-492C-9477-CCD55E035EE8}"
+        "PackageCode" = "8:{D01B198F-669C-441D-BDE6-B0730C02F56F}"
         "UpgradeCode" = "8:{FC378D42-9F38-4EF8-9D28-450EB5069680}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -428,6 +434,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_920DED657D9746A48E6EBFB53E759CF4"
+            {
+            "Name" = "8:Sist. Gestion Optica (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_7391F6E5B3604D888147DC3E82DA349F"
+            "Folder" = "8:_AF1764D39D934A04B39F090A0957B16F"
+            "WorkingFolder" = "8:_2AF62714B2B34EF5B038E68BCBCAF308"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E520FD138C404B8089D04DE03B8C640A"
             {
             "Name" = "8:Sist. Gestion Optica"

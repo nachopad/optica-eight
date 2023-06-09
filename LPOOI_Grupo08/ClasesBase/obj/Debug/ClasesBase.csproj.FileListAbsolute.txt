@@ -39,3 +39,5 @@ C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\Clases
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\optica.mdf
+C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\optica_log.ldf
