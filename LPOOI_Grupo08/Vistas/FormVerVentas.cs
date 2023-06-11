@@ -77,6 +77,22 @@ namespace Vistas
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("¿Está seguro que desea dar de baja la venta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                ABMVentas.delete_venta(txtNVenta.Text);
+                MessageBox.Show("La venta fue dada de baja exitosamente", "Baja exitosa");
+                load_venta();
+            }
+            else
+            {
+                MessageBox.Show("Operacion cancelada", "Baja cancelada");
+            }
+            
+        }
+
 
     }
 }

@@ -155,6 +155,25 @@ namespace ClasesBase
             return dt;
 
         }
+        public static void delete_venta(string nroVenta)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
 
+            cmd.CommandText = "delete_venta_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@nroVenta", "%" + nroVenta + "%");
+
+            cnn.Open();
+
+            // Ejecuta la consulta usando ExecuteNonQuery()
+            cmd.ExecuteNonQuery();
+
+            // Cierra la conexión
+            cnn.Close();
+
+        }
     }
 }

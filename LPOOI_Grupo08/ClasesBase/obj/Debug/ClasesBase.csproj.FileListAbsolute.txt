@@ -41,3 +41,11 @@ C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\Clases
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\optica.mdf
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\optica_log.ldf
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\optica.mdf
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\optica_log.ldf
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll.config
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
