@@ -138,6 +138,12 @@ namespace Vistas
         {
 
         }
+
+        private void buscarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBuscarCliente ver = new FormBuscarCliente();
+            ver.Show();
+        }
     
     }
 }

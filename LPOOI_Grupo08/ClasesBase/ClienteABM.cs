@@ -180,5 +180,30 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable search_clientes_nombreApellidoDni_sp(string dni, string nombre, string apellido, string busqueda) {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "search_clienteByNombreApellidoDni_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@dni", dni);
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+            cmd.Parameters.AddWithValue("@apellido", apellido);
+
+            //Ejecuta la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+
+            DataView dv = dt.DefaultView;
+            dv.Sort = busqueda + " ASC"; 
+            dt = dv.ToTable();
+
+            return dt;
+        }
+
     }
 }

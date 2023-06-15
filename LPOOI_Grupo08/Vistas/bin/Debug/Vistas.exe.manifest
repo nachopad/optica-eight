@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kUucpt4QvLOxkqJYxcs+Xzxo23o=</dsig:DigestValue>
+        <dsig:DigestValue>QRB2xEbGk1+DmPPRpNt1fBEa1X8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="115200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Vistas.exe" size="119296">
       <assemblyIdentity name="Vistas" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4TXwxJXK5JJ1karugxv4q+v1ZtM=</dsig:DigestValue>
+        <dsig:DigestValue>xARlwvmn+ai+K66zR+NRINYzxec=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

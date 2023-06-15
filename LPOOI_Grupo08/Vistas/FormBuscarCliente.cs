@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using ClasesBase;
+using System.Drawing.Drawing2D;
+
+namespace Vistas
+{
+    public partial class FormBuscarCliente : Form
+    {
+        public FormBuscarCliente()
+        {
+            InitializeComponent();
+        }
+
+        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e){
+            base.OnPaint(e);
+            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
+            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
+            Color.OrangeRed, Color.Yellow,
+
+           LinearGradientMode.ForwardDiagonal);
+            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+        }
+
+        private void FormBuscarCliente_Load(object sender, EventArgs e)
+        {
+            dgwCliente.Visible = false;
+            labelBusqueda.Visible = true;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            string busqueda="";
+            if (radioApellido.Checked){
+                busqueda = "Apellido";
+            }
+            else if(radioNombre.Checked){
+                busqueda = "Nombre";
+            }
+            else if (radioDni.Checked) {
+                busqueda = "Dni";
+            }
+            this.dgwCliente.DataSource = ClienteABM.search_clientes_nombreApellidoDni_sp(txtDni.Text, txtNombre.Text, txtApellido.Text, busqueda);
+            if (dgwCliente.RowCount == 1)
+            {
+                MessageBox.Show("No existen clientes con tales datos");
+                dgwCliente.Visible = false;
+                labelBusqueda.Visible = true;
+            }
+            else
+            {
+                labelBusqueda.Visible = false;
+                dgwCliente.Visible = true;
+            }
+        }
+    }
+}
