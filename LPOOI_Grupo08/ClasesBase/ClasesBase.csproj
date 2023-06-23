@@ -65,11 +65,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>opticaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="opticaDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>opticaDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoABM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,30 +92,10 @@
     <None Include="opticaDataSet.xss">
       <DependentUpon>opticaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="opticaDataSet1.xsc">
-      <DependentUpon>opticaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="opticaDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>opticaDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="opticaDataSet1.xss">
-      <DependentUpon>opticaDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="optica.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="optica_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>optica.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

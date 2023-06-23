@@ -151,8 +151,6 @@ C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Deb
 C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
 C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.exe.manifest
 C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.application
-C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\optica.mdf
-C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\optica_log.ldf
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe.config
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe.manifest
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.application

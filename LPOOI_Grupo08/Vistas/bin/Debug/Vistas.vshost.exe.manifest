@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClasesBase.dll" size="379392">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClasesBase.dll" size="26112">
       <assemblyIdentity name="ClasesBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QRB2xEbGk1+DmPPRpNt1fBEa1X8=</dsig:DigestValue>
+        <dsig:DigestValue>o4wRRP3lYwBbMH8lVsQZDiirlyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xARlwvmn+ai+K66zR+NRINYzxec=</dsig:DigestValue>
+        <dsig:DigestValue>jQzTgSCFCROjYzqER6vs+6+boUo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

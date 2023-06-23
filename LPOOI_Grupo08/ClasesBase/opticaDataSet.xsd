@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="opticaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="opticaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ClasesBase.Properties.Settings.GlobalReference.Default.opticaConnectionString" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\optica.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="optica.mdf" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
