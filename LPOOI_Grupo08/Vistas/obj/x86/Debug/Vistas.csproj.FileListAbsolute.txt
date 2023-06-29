@@ -177,3 +177,29 @@ C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.application
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.exe
 C:\Users\maxi1\OneDrive\Documentos\Programacion LPOO\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.pdb
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe.config
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.exe
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.pdb
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe.manifest
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.application
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.pdb
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\ClasesBase.dll
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\ClasesBase.pdb
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaCliente.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaObraSocial.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaProducto.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.AltaUsuario.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormBuscarCliente.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltrarVenta.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormFiltroProducto.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.formLogin.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormMain.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormProductosVendidosByCliente.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVenta.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormVerVentas.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.exe.manifest
+D:\FACULTAD\lpoo\proyecto2\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.application

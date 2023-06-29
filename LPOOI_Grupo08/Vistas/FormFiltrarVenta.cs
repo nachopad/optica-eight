@@ -50,6 +50,10 @@ namespace Vistas
                     fechaInicio.Value = DateTime.Now.AddHours(-2);
                     fechaFinal.Value = DateTime.Now;
                 }
+
+
+
+
                 string fechaI = fechaInicio.Value.ToString("yyyy/M/d");
                 string fechaF = fechaFinal.Value.ToString("yyyy/M/d");
                 tablaFechas.DataSource = ABMVentas.filterSales(fechaI, fechaF);

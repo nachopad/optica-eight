@@ -135,6 +135,22 @@ namespace ClasesBase
             DataTable dt = new DataTable();
             da.Fill(dt);
 
+
+            // Calcular la cantidad de registros
+            int cantidadRegistros = dt.Rows.Count;
+
+            // Crear una nueva fila y añadirla al DataTable
+            DataRow totalRow = dt.NewRow();
+            dt.Rows.Add(totalRow);
+
+            // Obtener el índice de la fila creada
+            int rowIndex = dt.Rows.Count - 1;
+
+            // Agregar el título "Total de ventas" en la última celda de la fila
+            dt.Rows[rowIndex].SetField<string>(0, "Total de ventas: " );
+            dt.Rows[rowIndex].SetField<string>(1, ""+cantidadRegistros );
+
+
             return dt; 
         }
 
