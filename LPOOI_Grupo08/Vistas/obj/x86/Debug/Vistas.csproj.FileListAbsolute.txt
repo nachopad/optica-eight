@@ -203,3 +203,10 @@ C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Deb
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormBuscarCliente.resources
 C:\Users\lenovo\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormObraSocialAfiliados.resources
 C:\Users\argca\OneDrive\Documentos\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormObraSocialAfiliados.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.exe.manifest
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\bin\Debug\Vistas.application
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormBuscarCliente.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.FormObraSocialAfiliados.resources
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.exe.manifest
+C:\Users\PC\Documents\LPOO.Grupo08\LPOOI_Grupo08\Vistas\obj\x86\Debug\Vistas.application
