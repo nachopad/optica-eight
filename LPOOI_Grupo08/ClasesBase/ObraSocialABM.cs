@@ -47,12 +47,12 @@ namespace ClasesBase
             cnn.Close();
         }
 
-        public static DataTable list_obraSocial_sp()
+        public static DataTable listar_obraSocial_sp()
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "list_ObrasSocialesCuit_sp";
+            cmd.CommandText = "listar_ObrasSociales_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
 
@@ -104,6 +104,33 @@ namespace ClasesBase
 
             //// Cierra la conexión
             cnn.Close();
+        }
+
+        public static DataTable listar_afiliados_sp(string cuit)
+        {
+            SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "list_afiliadosByObraSocial_sp";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("cuit", cuit);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            int cantidadRegistros = dt.Rows.Count;
+            DataRow totalRow = dt.NewRow();
+            dt.Rows.Add(totalRow);
+            int rowIndex = dt.Rows.Count - 1;
+            dt.Rows[rowIndex].SetField<string>(0, "Total de afiliados: ");
+            dt.Rows[rowIndex].SetField<string>(1, "" + cantidadRegistros);
+
+            return dt;
+
         }
     }
 }

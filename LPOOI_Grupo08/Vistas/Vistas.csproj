@@ -128,6 +128,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObraSocialAfiliados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObraSocialAfiliados.Designer.cs">
+      <DependentUpon>FormObraSocialAfiliados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProductosVendidosByCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObraSocialAfiliados.resx">
+      <DependentUpon>FormObraSocialAfiliados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductosVendidosByCliente.resx">
       <DependentUpon>FormProductosVendidosByCliente.cs</DependentUpon>

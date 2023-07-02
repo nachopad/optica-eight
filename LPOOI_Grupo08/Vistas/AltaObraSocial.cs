@@ -92,12 +92,12 @@ namespace Vistas
 
         private void obraSocial_load()
         {
-            dgwObrasSociales.DataSource = ObraSocialABM.list_obraSocial_sp();
+            dgwObrasSociales.DataSource = ObraSocialABM.listar_obraSocial_sp();
         }
 
         private void AltaObraSocial_Load(object sender, EventArgs e)
         {
-            dgwObrasSociales.DataSource = ObraSocialABM.list_obraSocial_sp();
+            dgwObrasSociales.DataSource = ObraSocialABM.listar_obraSocial_sp();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -152,6 +152,12 @@ namespace Vistas
                 obraSocial_load();
 
             }
+        }
+
+        private void btnAfiliados_Click(object sender, EventArgs e)
+        {
+            FormObraSocialAfiliados formObraSocialAfiliados = new FormObraSocialAfiliados();
+            formObraSocialAfiliados.Show();
         }
     }
 }

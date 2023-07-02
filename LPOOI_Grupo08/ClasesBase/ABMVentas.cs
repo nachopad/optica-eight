@@ -168,6 +168,19 @@ namespace ClasesBase
             DataTable dt = new DataTable();
             da.Fill(dt);
 
+            int totalVentas = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                totalVentas += Convert.ToInt32(row["total"]);
+            }
+
+            DataRow totalRow = dt.NewRow();
+            totalRow["prod_codigo"] = DBNull.Value;
+            totalRow["prod_descripcion"] = "TOTAL:";
+            totalRow["fecha"] = DBNull.Value;
+            totalRow["total"] = totalVentas;
+            dt.Rows.Add(totalRow);
+
             return dt;
 
         }
