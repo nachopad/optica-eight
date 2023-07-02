@@ -169,6 +169,7 @@ namespace Vistas
             else
             {
                 this.lblCliCompra.Visible = false;
+                this.dgwVenta.Visible = true;
             }
         }
 
