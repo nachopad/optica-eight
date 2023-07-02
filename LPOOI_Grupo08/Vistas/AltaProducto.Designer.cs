@@ -100,6 +100,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // txtCategoria
             // 
@@ -121,6 +122,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // btnAltaProducto
             // 
@@ -292,6 +294,7 @@
             this.txtCodProdSearch.Name = "txtCodProdSearch";
             this.txtCodProdSearch.Size = new System.Drawing.Size(114, 20);
             this.txtCodProdSearch.TabIndex = 0;
+            this.txtCodProdSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProdSearch_KeyPress);
             // 
             // lblCodProdSearch
             // 

@@ -186,6 +186,7 @@
             this.txtDniSearch.Name = "txtDniSearch";
             this.txtDniSearch.Size = new System.Drawing.Size(89, 20);
             this.txtDniSearch.TabIndex = 4;
+            this.txtDniSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniSearch_KeyPress);
             // 
             // btnFecha
             // 

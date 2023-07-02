@@ -133,6 +133,7 @@
             this.txtNroCarnet.Name = "txtNroCarnet";
             this.txtNroCarnet.Size = new System.Drawing.Size(113, 20);
             this.txtNroCarnet.TabIndex = 5;
+            this.txtNroCarnet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroCarnet_KeyPress);
             // 
             // BotonGuardar
             // 
@@ -150,6 +151,7 @@
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(113, 20);
             this.txtDni.TabIndex = 0;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
             // lblDni
             // 
@@ -293,6 +295,7 @@
             this.txtCarnetSearch.Name = "txtCarnetSearch";
             this.txtCarnetSearch.Size = new System.Drawing.Size(114, 20);
             this.txtCarnetSearch.TabIndex = 1;
+            this.txtCarnetSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarnetSearch_KeyPress);
             // 
             // txtDniSearch
             // 
@@ -300,6 +303,7 @@
             this.txtDniSearch.Name = "txtDniSearch";
             this.txtDniSearch.Size = new System.Drawing.Size(114, 20);
             this.txtDniSearch.TabIndex = 0;
+            this.txtDniSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniSearch_KeyPress);
             // 
             // btnRegresar
             // 
