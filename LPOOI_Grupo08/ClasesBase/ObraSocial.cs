@@ -11,6 +11,13 @@ namespace ClasesBase
         private string os_RazonSocial;
         private string os_Direccion;
         private string os_Telefono;
+        private int os_id;
+
+        public int Os_id
+        {
+            get { return os_id; }
+            set { os_id = value; }
+        }
 
         public string Os_Telefono
         {
@@ -44,6 +51,11 @@ namespace ClasesBase
             os_Direccion = direccion;
             os_RazonSocial = razonSocial;
             os_Telefono = telefono;
+        }
+
+        public ObraSocial()
+        {
+            // TODO: Complete member initialization
         }
 
         public override string ToString()

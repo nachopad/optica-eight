@@ -60,6 +60,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteABM.cs" />
     <Compile Include="ObraSocial.cs" />
+    <Compile Include="ObraSocialABM.cs" />
     <Compile Include="opticaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
