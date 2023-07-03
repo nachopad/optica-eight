@@ -35,13 +35,15 @@
             this.fechaFinal = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.fechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.lblFechas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaFechas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(110, 206);
+            this.btnFiltrar.Location = new System.Drawing.Point(57, 235);
             this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(130, 43);
@@ -53,11 +55,12 @@
             // tablaFechas
             // 
             this.tablaFechas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaFechas.Location = new System.Drawing.Point(18, 18);
+            this.tablaFechas.Location = new System.Drawing.Point(15, 57);
             this.tablaFechas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tablaFechas.Name = "tablaFechas";
             this.tablaFechas.Size = new System.Drawing.Size(524, 288);
             this.tablaFechas.TabIndex = 1;
+            this.tablaFechas.Visible = false;
             // 
             // groupBox1
             // 
@@ -67,7 +70,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.fechaInicio);
             this.groupBox1.Controls.Add(this.btnFiltrar);
-            this.groupBox1.Location = new System.Drawing.Point(550, 18);
+            this.groupBox1.Location = new System.Drawing.Point(547, 57);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -116,11 +119,36 @@
             this.fechaInicio.Size = new System.Drawing.Size(162, 26);
             this.fechaInicio.TabIndex = 1;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(15, 4);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(130, 43);
+            this.btnVolver.TabIndex = 3;
+            this.btnVolver.Text = "Volver al Menú";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // lblFechas
+            // 
+            this.lblFechas.AutoSize = true;
+            this.lblFechas.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechas.Location = new System.Drawing.Point(160, 182);
+            this.lblFechas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechas.Name = "lblFechas";
+            this.lblFechas.Size = new System.Drawing.Size(184, 29);
+            this.lblFechas.TabIndex = 25;
+            this.lblFechas.Text = "Ingrese fechas";
+            // 
             // FormFiltrarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 402);
+            this.Controls.Add(this.lblFechas);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tablaFechas);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -132,6 +160,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -144,5 +173,7 @@
         private System.Windows.Forms.DateTimePicker fechaFinal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fechaInicio;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblFechas;
     }
 }

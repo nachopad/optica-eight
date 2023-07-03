@@ -78,7 +78,7 @@
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(237, 35);
             this.btnVolver.TabIndex = 7;
-            this.btnVolver.Text = "Volver";
+            this.btnVolver.Text = "Volver al Menú";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 

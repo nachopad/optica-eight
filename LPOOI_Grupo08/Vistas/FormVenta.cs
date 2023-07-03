@@ -31,15 +31,7 @@ namespace Vistas
 
         private void FormVenta_Load(object sender, EventArgs e)
         {
-            load_comboClientes();
             load_comboProductos();
-        }
-
-        private void load_comboClientes()
-        {
-            cmbCliente.DisplayMember = "DNI";
-            cmbCliente.ValueMember = "DNI";
-            cmbCliente.DataSource = ClienteABM.list_clientes_sp();
         }
 
         private void load_comboProductos()
@@ -51,17 +43,18 @@ namespace Vistas
 
         private void btnRealizarVenta_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(txtCantidad.Text)){
+            if (String.IsNullOrEmpty(txtCantidad.Text) || String.IsNullOrEmpty(txtDni.Text))
+            {
                 MessageBox.Show("Debe ingresar todos los campos", "Venta", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }else{
                 var respuesta = MessageBox.Show("¿Desea realizar la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
                 // Venta
-                ABMVentas.insert_venta(dtpFechaVenta.Value, cmbCliente.SelectedValue.ToString());
+                ABMVentas.insert_venta(dtpFechaVenta.Value, txtDni.Text);
 
                 // Me permite obtener el nro de venta
-                int nro = ABMVentas.get_NroVenta(cmbCliente.SelectedValue.ToString());
+                int nro = ABMVentas.get_NroVenta(txtDni.Text);
                 decimal precio = ProductoABM.get_Precio_sp(cmbProducto.SelectedValue.ToString());
 
                 //Detalle Venta
@@ -124,5 +117,47 @@ namespace Vistas
             FormMain.ActiveForm.Show();
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string busqueda = "";
+            if (radioApellido.Checked)
+            {
+                busqueda = "Apellido";
+            }
+            if (radioNombre.Checked)
+            {
+                busqueda = "Nombre";
+            }
+            if (radioDni.Checked)
+            {
+                busqueda = "Dni";
+            }
+            this.dgwCliente.DataSource = ClienteABM.search_clientes_nombreApellidoDni_sp(txtDniSearch.Text, txtNombre.Text, txtApellido.Text, busqueda);
+            if (dgwCliente.RowCount == 1)
+            {
+                MessageBox.Show("No existen clientes registrados con los datos ingresados.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dgwCliente.Visible = false;
+                labelBusqueda.Visible = true;
+            }
+            else
+            {
+                dgwCliente.Visible = true;
+                labelBusqueda.Visible = false;
+                txtDni.Text = dgwCliente.CurrentRow.Cells["DNI"].Value.ToString();
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }

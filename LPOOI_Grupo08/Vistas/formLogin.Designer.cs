@@ -114,7 +114,7 @@
             this.txtPassword.Size = new System.Drawing.Size(148, 26);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Tag = "";
-            this.txtPassword.Text = "Ingrese Contraseña";
+            this.txtPassword.Text = "Ingrese su contraseña";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.Click += new System.EventHandler(this.IngContra_Click);
             this.txtPassword.TextChanged += new System.EventHandler(this.IngContra_TextChanged);

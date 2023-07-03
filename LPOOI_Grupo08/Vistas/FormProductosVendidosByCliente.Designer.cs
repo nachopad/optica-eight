@@ -40,17 +40,19 @@
             // dgwProductosCliente
             // 
             this.dgwProductosCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProductosCliente.Location = new System.Drawing.Point(12, 22);
+            this.dgwProductosCliente.Location = new System.Drawing.Point(13, 60);
+            this.dgwProductosCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgwProductosCliente.Name = "dgwProductosCliente";
-            this.dgwProductosCliente.Size = new System.Drawing.Size(320, 243);
+            this.dgwProductosCliente.Size = new System.Drawing.Size(480, 374);
             this.dgwProductosCliente.TabIndex = 1;
             // 
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(15, 38);
+            this.cmbCliente.Location = new System.Drawing.Point(22, 58);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(158, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(235, 28);
             this.cmbCliente.TabIndex = 2;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
@@ -58,19 +60,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Location = new System.Drawing.Point(18, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Cliente";
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(365, 242);
+            this.btnVolver.Location = new System.Drawing.Point(13, 14);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(158, 23);
+            this.btnVolver.Size = new System.Drawing.Size(149, 35);
             this.btnVolver.TabIndex = 4;
-            this.btnVolver.Text = "Volver";
+            this.btnVolver.Text = "Volver al Menú";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
@@ -79,20 +83,23 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.cmbCliente);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(350, 22);
+            this.groupBox1.Location = new System.Drawing.Point(517, 60);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 92);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(278, 142);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
             // FormProductosVendidosByCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 291);
+            this.ClientSize = new System.Drawing.Size(820, 448);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dgwProductosCliente);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormProductosVendidosByCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filtro de Productos vendidos por Cliente";

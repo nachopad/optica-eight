@@ -42,18 +42,6 @@ namespace Vistas
             formCliente.Show();
         }
 
-        private void navProducto_Click(object sender, EventArgs e)
-        {
-            AltaProducto formProducto = new AltaProducto();
-            formProducto.Show();
-        }
-
-        private void navObraSocial_Click(object sender, EventArgs e)
-        {
-            AltaObraSocial formObraSocial = new AltaObraSocial();
-            formObraSocial.Show();
-        }
-
         private void navSalir_Click_1(object sender, EventArgs e)
         {
             var resultado = MessageBox.Show("¿Está seguro de cerrar sesión?", "Advertencia", MessageBoxButtons.YesNo);
@@ -78,12 +66,6 @@ namespace Vistas
         {
             FormVerVentas ver = new FormVerVentas();
             ver.Show();
-        }
-
-        private void navUsuario_Click(object sender, EventArgs e)
-        {
-            AltaUsuario altaUsuario = new AltaUsuario();
-            altaUsuario.Show();
         }
 
         public void verificar_login(string usuario, string rolCodigo)
@@ -129,20 +111,46 @@ namespace Vistas
 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void buscarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormBuscarCliente ver = new FormBuscarCliente();
-            ver.Show();
+            FormBuscarCliente formBuscarCliente = new FormBuscarCliente();
+            formBuscarCliente.Show();
+        }
+
+        private void gestionarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaUsuario altaUsuario = new AltaUsuario();
+            altaUsuario.Show();
+        }
+
+        private void gestionarObraSocialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaObraSocial formObraSocial = new AltaObraSocial();
+            formObraSocial.Show();
+        }
+
+        private void listaDeAfiliadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormObraSocialAfiliados formObraSocialAfiliados = new FormObraSocialAfiliados();
+            formObraSocialAfiliados.Show();
+        }
+
+        private void gestionarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaProducto formProducto = new AltaProducto();
+            formProducto.Show();
+        }
+
+        private void ventasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFiltroProducto tablaFiltro = new FormFiltroProducto();
+            tablaFiltro.Show();
+        }
+
+        private void ventasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProductosVendidosByCliente producto = new FormProductosVendidosByCliente();
+            producto.Show();
         }
     
     }

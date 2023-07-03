@@ -57,11 +57,18 @@ namespace Vistas
                 string fechaI = fechaInicio.Value.ToString("yyyy/M/d");
                 string fechaF = fechaFinal.Value.ToString("yyyy/M/d");
                 tablaFechas.DataSource = ABMVentas.filterSales(fechaI, fechaF);
+                tablaFechas.Visible = true;
+                lblFechas.Visible = false;
             }
             catch (Exception error)
             {
                 MessageBox.Show("ERROR: " + error.Message);
             } 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         

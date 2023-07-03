@@ -54,7 +54,7 @@ namespace Vistas
             this.dgwCliente.DataSource = ClienteABM.search_clientes_nombreApellidoDni_sp(txtDni.Text, txtNombre.Text, txtApellido.Text, busqueda);
             if (dgwCliente.RowCount == 1)
             {
-                MessageBox.Show("No existen clientes con tales datos");
+                MessageBox.Show("No existen clientes registrados con los datos ingresados.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 dgwCliente.Visible = false;
                 labelBusqueda.Visible = true;
             }
