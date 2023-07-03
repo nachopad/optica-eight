@@ -112,7 +112,17 @@ namespace ClasesBase
             DataTable dt = new DataTable();
             da.Fill(dt);
 
+
+            int numeroFilas = dt.Rows.Count;
+            // Crear una nueva fila y establecer los valores
+            DataRow filaTotal = dt.NewRow();
+            filaTotal["Descripcin"] = "Total ventas :";
+            filaTotal["Precio"] = numeroFilas;
+
+            // Agregar la fila al DataTable
+            dt.Rows.Add(filaTotal);
             return dt;
+
         }
 
         public static void insert_producto_sp(Producto producto)
