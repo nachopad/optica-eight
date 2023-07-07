@@ -21,12 +21,13 @@ namespace Vistas
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
-            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
-            Color.OrangeRed, Color.Yellow,
-
-           LinearGradientMode.ForwardDiagonal);
-            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+            if (this.ClientSize.Width > 0 && this.ClientSize.Height > 0)
+            {
+                Rectangle forma = new Rectangle(new Point(0, 0), this.ClientSize);
+                LinearGradientBrush gradiente = new LinearGradientBrush(forma,
+                    Color.OrangeRed, Color.Yellow, LinearGradientMode.ForwardDiagonal);
+                e.Graphics.FillRegion(gradiente, new Region(forma));
+            }
         }
 
         private void load_venta()
@@ -114,17 +115,6 @@ namespace Vistas
                 e.Handled = true;
             }
         }
-
-        private void dgwVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
     }
 }

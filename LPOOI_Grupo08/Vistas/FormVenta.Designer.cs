@@ -140,7 +140,6 @@
             this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Cliente";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTotal
             // 
@@ -302,7 +301,6 @@
             this.label10.Size = new System.Drawing.Size(98, 20);
             this.label10.TabIndex = 29;
             this.label10.Text = "Ordnear por:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // radioDni
             // 

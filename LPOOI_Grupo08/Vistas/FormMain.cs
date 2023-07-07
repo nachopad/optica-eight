@@ -21,12 +21,13 @@ namespace Vistas
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
-            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
-            Color.Cyan, Color.Blue,
-
-           LinearGradientMode.Vertical);
-            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+            if (this.ClientSize.Width > 0 && this.ClientSize.Height > 0)
+            {
+                Rectangle forma = new Rectangle(new Point(0, 0), this.ClientSize);
+                LinearGradientBrush gradiente = new LinearGradientBrush(forma,
+                    Color.Cyan, Color.Blue, LinearGradientMode.Vertical);
+                e.Graphics.FillRegion(gradiente, new Region(forma));
+            }
         }
 
         public FormMain(Usuario usu,string tipo) {
@@ -84,31 +85,6 @@ namespace Vistas
             }
             nomUsu.Text = usuario;
             tipoUsu.Text = UsuarioABM.get_rolDescripcion_sp(rolCodigo);
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nomUsu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void buscarClientesToolStripMenuItem_Click(object sender, EventArgs e)

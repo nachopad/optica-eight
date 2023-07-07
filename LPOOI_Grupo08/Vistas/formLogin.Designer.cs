@@ -110,7 +110,7 @@
             this.txtPassword.Text = "contrasena";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.Click += new System.EventHandler(this.IngContra_Click);
-            this.txtPassword.TextChanged += new System.EventHandler(this.IngContra_TextChanged);
+           
             // 
             // txtUsername
             // 
@@ -121,7 +121,6 @@
             this.txtUsername.Text = "Ingrese Usuario";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUsername.Click += new System.EventHandler(this.IngUsu_Click);
-            this.txtUsername.TextChanged += new System.EventHandler(this.IngUsu_TextChanged);
             // 
             // formLogin
             // 

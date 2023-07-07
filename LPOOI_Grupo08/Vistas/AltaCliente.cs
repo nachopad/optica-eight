@@ -17,16 +17,16 @@ namespace Vistas
             InitializeComponent();
         }
 
-     
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
-            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
-            Color.OrangeRed, Color.Yellow,
-
-           LinearGradientMode.ForwardDiagonal);
-            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+            if (this.ClientSize.Width > 0 && this.ClientSize.Height > 0)
+            {
+                Rectangle forma = new Rectangle(new Point(0, 0), this.ClientSize);
+                LinearGradientBrush gradiente = new LinearGradientBrush(forma,
+                    Color.OrangeRed, Color.Yellow, LinearGradientMode.ForwardDiagonal);
+                e.Graphics.FillRegion(gradiente, new Region(forma));
+            }
         }
 
         private void load_clientes()
@@ -176,34 +176,12 @@ namespace Vistas
             load_combo_obrasSocialesCuit();
         }
 
-        
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDniSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             AltaCliente.ActiveForm.Hide();
             FormMain.ActiveForm.Activate();
             FormMain.ActiveForm.Show();
             this.Close();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void nuevo_Click(object sender, EventArgs e)

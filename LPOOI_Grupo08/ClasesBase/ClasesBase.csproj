@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ABMVentas.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteABM.cs" />
     <Compile Include="ObraSocial.cs" />

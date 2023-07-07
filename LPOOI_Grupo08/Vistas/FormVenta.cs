@@ -21,12 +21,13 @@ namespace Vistas
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
-            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
-            Color.OrangeRed, Color.Yellow,
-
-           LinearGradientMode.ForwardDiagonal);
-            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+            if (this.ClientSize.Width > 0 && this.ClientSize.Height > 0)
+            {
+                Rectangle forma = new Rectangle(new Point(0, 0), this.ClientSize);
+                LinearGradientBrush gradiente = new LinearGradientBrush(forma,
+                    Color.OrangeRed, Color.Yellow, LinearGradientMode.ForwardDiagonal);
+                e.Graphics.FillRegion(gradiente, new Region(forma));
+            }
         }
 
         private void FormVenta_Load(object sender, EventArgs e)
@@ -50,14 +51,9 @@ namespace Vistas
                 var respuesta = MessageBox.Show("¿Desea realizar la venta?", "Venta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                // Venta
                 ABMVentas.insert_venta(dtpFechaVenta.Value, txtDni.Text);
-
-                // Me permite obtener el nro de venta
                 int nro = ABMVentas.get_NroVenta(txtDni.Text);
                 decimal precio = ProductoABM.get_Precio_sp(cmbProducto.SelectedValue.ToString());
-
-                //Detalle Venta
                 decimal total = precio * Convert.ToDecimal(txtCantidad.Text);
                 txtTotal.Text = total.ToString();
                 ABMVentas.insert_ventaDetalle(nro, cmbProducto.SelectedValue.ToString(), precio, Convert.ToDecimal(txtCantidad.Text), total);
@@ -118,12 +114,6 @@ namespace Vistas
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string busqueda = "";
@@ -154,10 +144,5 @@ namespace Vistas
             }
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-        
     }
 }

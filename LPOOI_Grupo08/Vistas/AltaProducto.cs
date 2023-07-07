@@ -21,14 +21,14 @@ namespace Vistas
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
-            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
-            Color.OrangeRed, Color.Yellow,
-
-           LinearGradientMode.ForwardDiagonal);
-            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+            if (this.ClientSize.Width > 0 && this.ClientSize.Height > 0)
+            {
+                Rectangle forma = new Rectangle(new Point(0, 0), this.ClientSize);
+                LinearGradientBrush gradiente = new LinearGradientBrush(forma,
+                    Color.OrangeRed, Color.Yellow, LinearGradientMode.ForwardDiagonal);
+                e.Graphics.FillRegion(gradiente, new Region(forma));
+            }
         }
-
         
         private void btnRegresar_Click(object sender, EventArgs e)
         {
@@ -114,23 +114,7 @@ namespace Vistas
 
                 }
             }
-
-            /*string codigo = txtCodigo.Text;
-                string categoria = txtCategoria.Text;
-                string descripcion = txtDescripcion.Text;
-                decimal precio;
-                bool success = decimal.TryParse(txtPrecio.Text, out precio);
-
-                if (string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(categoria) || string.IsNullOrEmpty(descripcion) || !success)
-                    MessageBox.Show("Todos los campos son obligatorios");
-                else if (MessageBox.Show("¿Está seguro que desea continuar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    Producto producto = new Producto(codigo, categoria, descripcion, precio);
-                    MessageBox.Show("Producto Guardado: " + producto.ToString());
-                }*/
         }
-
-        
 
         private void AltaProducto_Load(object sender, EventArgs e)
         {
@@ -181,12 +165,10 @@ namespace Vistas
         {
             if (dgwProductos.CurrentRow != null)
             {
-               
                 txtCodigo.Text = dgwProductos.CurrentRow.Cells["Codigo Producto"].Value.ToString();
                 txtCategoria.Text = dgwProductos.CurrentRow.Cells["Categoria"].Value.ToString();
                 txtDescripcion.Text = dgwProductos.CurrentRow.Cells["Descripcion"].Value.ToString();
                 txtPrecio.Text = dgwProductos.CurrentRow.Cells["Precio"].Value.ToString();
-                
             }
         }
 
@@ -236,7 +218,6 @@ namespace Vistas
                 return;
             }
         }
-
       
         }
 }

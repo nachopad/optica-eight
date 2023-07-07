@@ -114,7 +114,6 @@
             this.dgwUsuarios.RowTemplate.Height = 28;
             this.dgwUsuarios.Size = new System.Drawing.Size(462, 123);
             this.dgwUsuarios.TabIndex = 20;
-            this.dgwUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsuarios_CellContentClick);
             this.dgwUsuarios.CurrentCellChanged += new System.EventHandler(this.dgwUsuarios_CurrentCellChanged);
             // 
             // groupBox1
@@ -166,7 +165,6 @@
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(114, 21);
             this.cmbRol.TabIndex = 23;
-            this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.cmbRol_SelectedIndexChanged);
             // 
             // btnModificar
             // 

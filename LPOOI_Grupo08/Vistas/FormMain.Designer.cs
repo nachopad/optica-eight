@@ -71,7 +71,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bienvenido";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label4
             // 
@@ -92,7 +91,6 @@
             this.nomUsu.Name = "nomUsu";
             this.nomUsu.Size = new System.Drawing.Size(0, 20);
             this.nomUsu.TabIndex = 1;
-            this.nomUsu.Click += new System.EventHandler(this.nomUsu_Click);
             // 
             // tipoUsu
             // 
@@ -102,7 +100,6 @@
             this.tipoUsu.Name = "tipoUsu";
             this.tipoUsu.Size = new System.Drawing.Size(0, 20);
             this.tipoUsu.TabIndex = 3;
-            this.tipoUsu.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -114,7 +111,6 @@
             this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuStrip1
             // 
@@ -266,7 +262,6 @@
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
-            this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

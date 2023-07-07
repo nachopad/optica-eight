@@ -68,7 +68,6 @@
             this.lblCuit.Size = new System.Drawing.Size(46, 20);
             this.lblCuit.TabIndex = 1;
             this.lblCuit.Text = "CUIT";
-            this.lblCuit.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

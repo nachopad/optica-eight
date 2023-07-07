@@ -129,7 +129,6 @@
             this.dgwVenta.Name = "dgwVenta";
             this.dgwVenta.Size = new System.Drawing.Size(460, 528);
             this.dgwVenta.TabIndex = 10;
-            this.dgwVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwVenta_CellContentClick);
             this.dgwVenta.CurrentCellChanged += new System.EventHandler(this.dgwVenta_CurrentCellChanged);
             // 
             // gpbVenta

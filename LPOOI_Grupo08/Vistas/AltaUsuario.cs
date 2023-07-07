@@ -21,18 +21,17 @@ namespace Vistas
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             base.OnPaint(e);
-            Rectangle Forma = new Rectangle(new Point(0, 0), this.ClientSize);
-            LinearGradientBrush Gradiente = new LinearGradientBrush(Forma,
-            Color.OrangeRed, Color.Yellow,
-
-           LinearGradientMode.ForwardDiagonal);
-            e.Graphics.FillRegion(Gradiente, new Region(Forma));
+            if (this.ClientSize.Width > 0 && this.ClientSize.Height > 0)
+            {
+                Rectangle forma = new Rectangle(new Point(0, 0), this.ClientSize);
+                LinearGradientBrush gradiente = new LinearGradientBrush(forma,
+                    Color.OrangeRed, Color.Yellow, LinearGradientMode.ForwardDiagonal);
+                e.Graphics.FillRegion(gradiente, new Region(forma));
+            }
         }
 
         private void BotonGuardar_Click(object sender, EventArgs e)
         {
-            //Se decidió utilizar un try/catch en este metodo ya que al borrar el cmbRol, no puede
-            //realizar la conversión correctamente y tira un error en tiempo de ejecución. De esta manera se soluciona.
             try 
             {
                 Usuario oUser = new Usuario();
@@ -186,16 +185,6 @@ namespace Vistas
             FormMain.ActiveForm.Activate();
             FormMain.ActiveForm.Show();
             this.Close();
-        }
-
-        private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgwUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
     }

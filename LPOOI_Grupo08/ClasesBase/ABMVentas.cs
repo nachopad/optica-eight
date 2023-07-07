@@ -14,15 +14,11 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "insert_venta_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             cmd.Parameters.AddWithValue("@fecha", fecha);
             cmd.Parameters.AddWithValue("@dni", dni);
-
-            //Parametros
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
@@ -33,13 +29,10 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "list_venta_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -49,15 +42,11 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "list_ventasByCliente_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             cmd.Parameters.AddWithValue("@dni", dni);
-
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -67,13 +56,10 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "get_clientes_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -83,15 +69,11 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "get_NroVenta_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             cmd.Parameters.AddWithValue("@dni", dni);
-
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
             return Int32.Parse(dt.Rows[0]["ven_nro"].ToString());
@@ -101,18 +83,14 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "insert_ventaDetalle_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             cmd.Parameters.AddWithValue("@vnro", vnro);
             cmd.Parameters.AddWithValue("@cod", cod);
             cmd.Parameters.AddWithValue("@precio", precio);
             cmd.Parameters.AddWithValue("@cantidad", cantidad);
             cmd.Parameters.AddWithValue("@total", total);
-
-            //Parametros
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
@@ -120,41 +98,25 @@ namespace ClasesBase
 
         public static DataTable filterSales(string fechaInicio, string fechaFinal)
         {
-
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
-
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "get_FilterSales";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@fechaInicio",fechaInicio+" 03:00:00");
             cmd.Parameters.AddWithValue("@fechaFinal",fechaFinal+" 23:00:00");
             cmd.Connection = cnn;
-
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
-
-
-            // Calcular la cantidad de registros
             int cantidadRegistros = dt.Rows.Count;
-
-            // Crear una nueva fila y añadirla al DataTable
             DataRow totalRow = dt.NewRow();
             dt.Rows.Add(totalRow);
-
-            // Obtener el índice de la fila creada
             int rowIndex = dt.Rows.Count - 1;
-
-            // Agregar el título "Total de ventas" en la última celda de la fila
             dt.Rows[rowIndex].SetField<string>(0, "Total de ventas: " );
             dt.Rows[rowIndex].SetField<string>(1, ""+cantidadRegistros );
-
-
             return dt; 
         }
 
-        //Metodo para obtener registros de ventas de un producto en un periodo de tiempo
         public static DataTable get_SalesByDate(String fechaInicio, String fechaFinal)
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
@@ -167,7 +129,6 @@ namespace ClasesBase
             cmd.Connection = cnn;
             DataTable dt = new DataTable();
             da.Fill(dt);
-
             int totalVentas = 0;
             foreach (DataRow row in dt.Rows)
             {
@@ -180,7 +141,6 @@ namespace ClasesBase
             totalRow["fecha"] = DBNull.Value;
             totalRow["total"] = totalVentas;
             dt.Rows.Add(totalRow);
-
             return dt;
 
         }
@@ -188,21 +148,13 @@ namespace ClasesBase
         {
             SqlConnection cnn = new SqlConnection(ClasesBase.Properties.Settings.Default.opticaConnectionString);
             SqlCommand cmd = new SqlCommand();
-
             cmd.CommandText = "delete_venta_sp";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;
-
             cmd.Parameters.AddWithValue("@nroVenta", "%" + nroVenta + "%");
-
             cnn.Open();
-
-            // Ejecuta la consulta usando ExecuteNonQuery()
             cmd.ExecuteNonQuery();
-
-            // Cierra la conexión
             cnn.Close();
-
         }
     }
 }

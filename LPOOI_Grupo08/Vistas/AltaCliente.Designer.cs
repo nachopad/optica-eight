@@ -189,7 +189,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Cliente";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txtId
             // 
@@ -249,7 +248,6 @@
             this.lblDniSearch.Size = new System.Drawing.Size(26, 13);
             this.lblDniSearch.TabIndex = 3;
             this.lblDniSearch.Text = "DNI";
-            this.lblDniSearch.Click += new System.EventHandler(this.lblDniSearch_Click);
             // 
             // lblCarnetSearch
             // 
@@ -260,7 +258,6 @@
             this.lblCarnetSearch.Size = new System.Drawing.Size(53, 13);
             this.lblCarnetSearch.TabIndex = 4;
             this.lblCarnetSearch.Text = "N° Carnet";
-            this.lblCarnetSearch.Click += new System.EventHandler(this.label6_Click);
             // 
             // gbBusqueda
             // 
